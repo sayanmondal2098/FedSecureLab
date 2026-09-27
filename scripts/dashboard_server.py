@@ -90,6 +90,7 @@ def _read_state() -> dict[str, object]:
 def _load_dotenv(path: Path) -> dict[str, str]:
     values: dict[str, str] = {}
     if not path.exists():
+        _log_backend(f"Environment file not found: {path}", "warning")
         return values
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
@@ -97,6 +98,7 @@ def _load_dotenv(path: Path) -> dict[str, str]:
             continue
         key, value = line.split("=", 1)
         values[key.strip()] = value.strip()
+    _log_backend(f"Loaded environment overrides from {path} ({len(values)} keys)")
     return values
 
 
@@ -121,6 +123,9 @@ def _save_snapshot(tag: str) -> None:
     if src_dir.exists():
         for file in src_dir.glob("*.json"):
             (dst_dir / file.name).write_bytes(file.read_bytes())
+    _log_backend(
+        f"Snapshot {tag}: copied metrics files to {target} and {len(list(dst_dir.glob('*.json')))} client fragments."
+    )
     _log_event(f"Saved {tag} snapshot with completed metrics; it will remain available during the next run.")
 
 
@@ -218,7 +223,11 @@ def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag:
         "--run-config",
         run_config,
     ]
+    _log_backend(f"Launching {phase_name} command: {' '.join(cmd)}")
+    started = time.monotonic()
     proc = subprocess.run(cmd, cwd=str(PROJECT_ROOT), env=runtime_env)
+    elapsed = time.monotonic() - started
+    _log_backend(f"{phase_name.capitalize()} command exited rc={proc.returncode} duration={elapsed:.1f}s")
     if proc.returncode == 0:
         _save_snapshot(tag)
         _log_event(f"{phase_name.capitalize()} experiment completed successfully.")
@@ -236,6 +245,13 @@ def run_comparison(payload: dict[str, object]) -> None:
     poison_rate_map = str(payload.get("poison_rate_map", ""))
     poison_label_flip_offset = str(payload.get("poison_label_flip_offset", base_env.get("POISON_LABEL_FLIP_OFFSET", "1")))
     poison_noise_std = str(payload.get("poison_noise_std", base_env.get("POISON_NOISE_STD", "0.15")))
+
+    _log_backend(
+        "Comparison effective config: "
+        f"rounds={rounds} poison_mode={poison_mode} poison_client_ids={poison_client_ids or 'none'} "
+        f"poison_rate_default={poison_rate_default} poison_rate_map={poison_rate_map or 'none'} "
+        f"label_flip_offset={poison_label_flip_offset} noise_std={poison_noise_std}"
+    )
 
     _set_state(running=True, phase="starting", message="Starting clean then poisoned experiments", clean_exit_code=None, poisoned_exit_code=None, logs=[])
     _log_event("Comparison requested. Clean data will be saved before poisoned training begins.")
@@ -282,6 +298,7 @@ def run_comparison(payload: dict[str, object]) -> None:
     except Exception as exc:  # noqa: BLE001
         _set_state(running=False, phase="failed", message=f"Dashboard run failed: {exc}")
         _log_event(f"Dashboard run failed: {exc}", "error")
+        _log_backend(f"Exception in run_comparison: {type(exc).__name__}: {exc}", "error")
         reset_live_metrics()
 
 
@@ -301,6 +318,7 @@ def read_metrics() -> dict[str, list[dict[str, object]]]:
             clients.append(json.loads(path.read_text(encoding="utf-8")))
         except (OSError, json.JSONDecodeError):
             # A Ray worker may be writing a fragment exactly as we poll it.
+            _log_api_trace("metrics-client-read", f"Skipped unreadable client fragment: {path}")
             continue
     clients.sort(key=lambda row: (int(row["round"]), int(row["client_id"])))
 
@@ -310,21 +328,22 @@ def read_metrics() -> dict[str, list[dict[str, object]]]:
         try:
             with global_path.open(newline="", encoding="utf-8") as handle:
                 global_rows = list(csv.DictReader(handle))
-        except OSError:
-            pass
+        except OSError as exc:
+            _log_backend(f"Failed reading {global_path}: {exc}", "warning")
     statuses: list[dict[str, object]] = []
     for path in RESULTS_DIR.glob("client_status_*.json"):
         try:
             statuses.append(json.loads(path.read_text(encoding="utf-8")))
         except (OSError, json.JSONDecodeError):
+            _log_api_trace("metrics-status-read", f"Skipped unreadable status file: {path}")
             continue
     phase: dict[str, object] = {}
     phase_path = RESULTS_DIR / "live_phase.json"
     if phase_path.exists():
         try:
             phase = json.loads(phase_path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            pass
+        except (OSError, json.JSONDecodeError) as exc:
+            _log_backend(f"Failed reading live phase file {phase_path}: {exc}", "warning")
     _log_api_trace(
         "metrics",
         "GET /api/metrics -> "
@@ -339,7 +358,8 @@ def _read_csv_rows(path: Path) -> list[dict[str, object]]:
     try:
         with path.open(newline="", encoding="utf-8") as handle:
             return list(csv.DictReader(handle))
-    except OSError:
+    except OSError as exc:
+        _log_backend(f"Failed reading CSV {path}: {exc}", "warning")
         return []
 
 
@@ -368,16 +388,28 @@ def read_comparison() -> dict[str, object]:
 def reset_live_metrics() -> None:
     """Clear only disposable dashboard data before a new simulation starts."""
     for path in list(CLIENT_METRICS_DIR.glob("*.json")) if CLIENT_METRICS_DIR.exists() else []:
-        path.unlink()
+        try:
+            path.unlink()
+        except OSError as exc:
+            _log_backend(f"Failed to remove client fragment {path}: {exc}", "warning")
     for path in RESULTS_DIR.glob("client_status_*.json"):
-        path.unlink()
+        try:
+            path.unlink()
+        except OSError as exc:
+            _log_backend(f"Failed to remove status file {path}: {exc}", "warning")
     for filename in ("global_metrics.csv", "client_metrics.csv", "metrics.csv"):
         path = RESULTS_DIR / filename
         if path.exists():
-            path.unlink()
+            try:
+                path.unlink()
+            except OSError as exc:
+                _log_backend(f"Failed to remove metrics file {path}: {exc}", "warning")
     phase_path = RESULTS_DIR / "live_phase.json"
     if phase_path.exists():
-        phase_path.unlink()
+        try:
+            phase_path.unlink()
+        except OSError as exc:
+            _log_backend(f"Failed to remove phase file {phase_path}: {exc}", "warning")
     _log_backend("Reset transient live metrics (client fragments, status files, live CSVs, phase file).")
 
 
@@ -445,6 +477,7 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             raw = self.rfile.read(content_len) if content_len > 0 else b"{}"
             payload = json.loads(raw.decode("utf-8"))
         except (ValueError, json.JSONDecodeError):
+            _log_backend("POST /api/start-comparison rejected malformed JSON payload", "warning")
             self.send_response(400)
             self.end_headers()
             return

@@ -60,3 +60,23 @@
 [2026-09-28T00:36:28.054768+05:30] [INFO] Poisoned experiment completed successfully.
 [2026-09-28T00:36:28.055279+05:30] [INFO] Comparison finished. Both clean and poisoned rows are available below.
 [2026-09-28T00:36:28.060564+05:30] [INFO] Cleared transient live metrics after completion; snapshots remain available.
+[2026-09-28T00:42:24.409545+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-09-28T00:42:24.411055+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-28T00:42:24.411055+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8012/federation-process.html
+[2026-09-28T00:42:26.142028+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-09-28T00:42:26.160970+05:30] [WARNING] POST /api/start-comparison rejected malformed JSON payload
+[2026-09-28T00:44:06.566305+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-09-28T00:44:06.566305+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-28T00:44:06.567822+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-28T00:44:21.121140+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-28T00:44:21.121982+05:30] [INFO] Starting clean experiment (2 rounds).
+[2026-09-28T00:44:21.122499+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20260928-004421-121982
+[2026-09-28T00:50:39.872945+05:30] [INFO] Saved clean snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:50:39.873456+05:30] [INFO] Clean experiment completed successfully.
+[2026-09-28T00:50:39.873456+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
+[2026-09-28T00:50:39.876133+05:30] [INFO] Starting poisoned experiment (2 rounds).
+[2026-09-28T00:50:39.876643+05:30] [INFO] Using isolated Flower runtime: dashboard-poisoned-20260928-005039-876133
+[2026-09-28T00:57:11.318307+05:30] [INFO] Saved poisoned snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:57:11.318889+05:30] [INFO] Poisoned experiment completed successfully.
+[2026-09-28T00:57:11.319402+05:30] [INFO] Comparison finished. Both clean and poisoned rows are available below.
+[2026-09-28T00:57:11.321531+05:30] [INFO] Cleared transient live metrics after completion; snapshots remain available.
