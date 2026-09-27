@@ -48,7 +48,22 @@ $poisonMode = if ($env:POISON_MODE) { $env:POISON_MODE } else { 'none' }
 $poisonClientIds = if ($env:POISON_CLIENT_IDS) { $env:POISON_CLIENT_IDS } else { '' }
 $poisonLabelFlipOffset = if ($env:POISON_LABEL_FLIP_OFFSET) { $env:POISON_LABEL_FLIP_OFFSET } else { '1' }
 $poisonNoiseStd = if ($env:POISON_NOISE_STD) { $env:POISON_NOISE_STD } else { '0.15' }
-$runConfig = "num-server-rounds=$env:NUM_SERVER_ROUNDS local-epochs=$env:LOCAL_EPOCHS batch-size=$env:BATCH_SIZE learning-rate=$env:LEARNING_RATE seed=$env:SEED poison-mode=$poisonMode poison-client-ids=$poisonClientIds poison-label-flip-offset=$poisonLabelFlipOffset poison-noise-std=$poisonNoiseStd"
+$quotedPoisonMode = '\"{0}\"' -f $poisonMode
+$quotedPoisonClientIds = '\"{0}\"' -f $poisonClientIds
+$runConfigParts = @(
+  "num-server-rounds=$env:NUM_SERVER_ROUNDS",
+  "local-epochs=$env:LOCAL_EPOCHS",
+  "batch-size=$env:BATCH_SIZE",
+  "learning-rate=$env:LEARNING_RATE",
+  "seed=$env:SEED",
+  "poison-mode=$quotedPoisonMode",
+  "poison-label-flip-offset=$poisonLabelFlipOffset",
+  "poison-noise-std=$poisonNoiseStd"
+)
+if ($poisonClientIds.Trim()) {
+  $runConfigParts += "poison-client-ids=$quotedPoisonClientIds"
+}
+$runConfig = $runConfigParts -join ' '
 
 $experimentTag = if ($env:EXPERIMENT_TAG) { $env:EXPERIMENT_TAG.Trim() } else { '' }
 $resultsRoot = Join-Path $projectRoot 'results'

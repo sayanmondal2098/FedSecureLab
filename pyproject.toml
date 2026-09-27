@@ -42,6 +42,12 @@ dirichlet-alpha = 0.5
 malicious-client-id = -1
 seed = 42
 verbose = 0
+poison-mode = "none"
+poison-client-ids = ""
+poison-label-flip-offset = 1
+poison-noise-std = 0.15
+poison-rate-default = 0.3
+poison-rate-map = ""
 
 
 #######################################################################

@@ -33,6 +33,22 @@ def _parse_poison_clients(raw: str) -> set[int]:
     return clients
 
 
+def _parse_poison_rate_map(raw: str) -> dict[int, float]:
+    rates: dict[int, float] = {}
+    for token in raw.split(","):
+        token = token.strip()
+        if not token or ":" not in token:
+            continue
+        client_str, rate_str = token.split(":", 1)
+        try:
+            client_id = int(client_str.strip())
+            rate = float(rate_str.strip())
+        except ValueError:
+            continue
+        rates[client_id] = max(0.0, min(1.0, rate))
+    return rates
+
+
 def _apply_poisoning(x_train: np.ndarray, y_train: np.ndarray, context: Context, client_id: int) -> tuple[np.ndarray, np.ndarray, bool, str]:
     run = context.run_config
     mode = str(run.get("poison-mode", "none")).strip().lower()
@@ -41,20 +57,32 @@ def _apply_poisoning(x_train: np.ndarray, y_train: np.ndarray, context: Context,
     if not is_poisoned_client:
         return x_train, y_train, False, "none"
 
+    rate_default = float(run.get("poison-rate-default", 0.3))
+    rate_default = max(0.0, min(1.0, rate_default))
+    rate_map = _parse_poison_rate_map(str(run.get("poison-rate-map", "")))
+    poison_rate = rate_map.get(client_id, rate_default)
+    poison_count = int(len(y_train) * poison_rate)
+    if poison_count <= 0:
+        return x_train, y_train, False, "none"
+    rng = np.random.default_rng(int(run.get("seed", 42)) + client_id)
+    poison_indices = rng.choice(len(y_train), size=poison_count, replace=False)
+
     if mode == "label_flip":
         # Deterministic label flipping for selected malicious clients.
         offset = int(run.get("poison-label-flip-offset", 1)) % 10
         if offset == 0:
             offset = 1
-        y_poisoned = (y_train + offset) % 10
+        y_poisoned = y_train.copy()
+        y_poisoned[poison_indices] = (y_poisoned[poison_indices] + offset) % 10
         return x_train, y_poisoned.astype(np.int64), True, mode
 
     if mode == "gaussian_noise":
         noise_std = float(run.get("poison-noise-std", 0.15))
         if noise_std <= 0 or math.isnan(noise_std):
             noise_std = 0.15
-        noise = np.random.normal(loc=0.0, scale=noise_std, size=x_train.shape).astype(np.float32)
-        x_poisoned = np.clip(x_train + noise, 0.0, 1.0)
+        x_poisoned = x_train.copy()
+        noise = np.random.normal(loc=0.0, scale=noise_std, size=x_poisoned[poison_indices].shape).astype(np.float32)
+        x_poisoned[poison_indices] = np.clip(x_poisoned[poison_indices] + noise, 0.0, 1.0)
         return x_poisoned, y_train, True, mode
 
     # Unknown mode falls back to no poisoning to keep training robust.
