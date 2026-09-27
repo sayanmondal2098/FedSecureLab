@@ -7,7 +7,7 @@ from flwr.app import ArrayRecord, Context, Message, MetricRecord, RecordDict
 from flwr.clientapp import ClientApp
 
 from flower_cifar.dataset import load_client_data
-from flower_cifar.metrics import write_client_metric, write_client_status
+from flower_cifar.metrics import write_client_metric, write_client_status, write_live_phase
 from flower_cifar.model import create_model
 from flower_cifar.utils import configure_tensorflow_gpu, set_global_seed
 
@@ -28,6 +28,7 @@ def train(message: Message, context: Context) -> Message:
     configure_tensorflow_gpu()
     client_id, num_partitions, epochs, batch_size, learning_rate = _settings(context)
     round_number = int(message.content["config"].get("server-round", 0))
+    write_live_phase(round_number, "train")
     write_client_status(client_id, round_number, "training")
     x_train, y_train, x_val, y_val = load_client_data(client_id, num_partitions, int(context.run_config["seed"]))
     model = create_model(learning_rate)
