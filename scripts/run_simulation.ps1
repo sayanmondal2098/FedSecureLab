@@ -13,18 +13,24 @@ Get-Content -LiteralPath $envPath | ForEach-Object {
     }
 }
 
+$python = Join-Path $projectRoot '.venv\Scripts\python.exe'
+if (-not (Test-Path -LiteralPath $python)) {
+  throw "Missing virtualenv Python at $python. Create .venv and install requirements first."
+}
+
 $env:Path = "$projectRoot\.venv\Scripts;$env:Path"
 $env:PYTHONUTF8 = '1'
 $env:FLWR_HOME = Join-Path $projectRoot '.flwr'
 $env:TEMP = Join-Path $projectRoot '.runtime-tmp'
 $env:TMP = $env:TEMP
+$env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO = '0'
 New-Item -ItemType Directory -Force -Path $env:FLWR_HOME, $env:TEMP | Out-Null
 
 # Start the live local dashboard before Flower. It reads the metric fragments
 # written by the clients and global evaluator, so the browser updates per round.
 $dashboardPort = 8000
 $dashboardUrl = "http://127.0.0.1:$dashboardPort/federation-process.html"
-$dashboard = Start-Process -FilePath "$projectRoot\.venv\Scripts\python.exe" `
+$dashboard = Start-Process -FilePath $python `
   -ArgumentList "scripts\dashboard_server.py --port $dashboardPort --reset" `
   -WorkingDirectory $projectRoot -WindowStyle Hidden -PassThru
 Start-Process $dashboardUrl
@@ -37,12 +43,10 @@ $federationConfig = "num-supernodes=$env:FLWR_NUM_SUPERNODES client-resources-nu
 $runConfig = "num-server-rounds=$env:NUM_SERVER_ROUNDS local-epochs=$env:LOCAL_EPOCHS batch-size=$env:BATCH_SIZE learning-rate=$env:LEARNING_RATE seed=$env:SEED"
 
 try {
-  flwr run $projectRoot --stream `
+  & $python -m flwr.cli.app run $projectRoot --stream `
     --federation-config $federationConfig `
     --run-config $runConfig
 } finally {
-  # Keep the final Evaluate state visible before ending the local dashboard.
-  Start-Sleep -Seconds 15
   if (-not $dashboard.HasExited) {
     Stop-Process -Id $dashboard.Id -Force
   }

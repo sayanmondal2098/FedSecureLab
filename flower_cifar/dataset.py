@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+import os
 from pathlib import Path
 import tempfile
 from typing import Any
@@ -26,13 +27,18 @@ def get_federated_dataset(num_partitions: int = NUM_CLIENTS, seed: int = 42) -> 
         raise ValueError(f"Baseline requires exactly {NUM_CLIENTS} partitions, got {num_partitions}")
     # IidPartitioner is deterministic after the global dataset seed is set.
     partitioner = IidPartitioner(num_partitions=num_partitions)
+    cache_root = Path(tempfile.gettempdir()) / "flwr-cifar10-cache"
+    # Give each process a private cache directory to avoid Windows rename/move
+    # races when multiple Flower worker processes prepare the same split.
+    process_cache_dir = cache_root / f"pid-{os.getpid()}"
     return FederatedDataset(
         dataset="uoft-cs/cifar10",
         partitioners={"train": partitioner},
+        shuffle=False,
         seed=seed,
         # Keep the cache outside Flower's copied app directory. This avoids
         # Windows' 260-character path limit in managed simulation runtimes.
-        cache_dir=str(Path(tempfile.gettempdir()) / "flwr-cifar10-cache"),
+        cache_dir=str(process_cache_dir),
     )
 
 

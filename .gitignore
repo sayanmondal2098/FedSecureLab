@@ -13,3 +13,7 @@ results/*.keras
 .flwr/
 .cache
 .cache/
+
+.log
+.err
+.runtime-tmp/
