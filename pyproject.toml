@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flower-cifar10-5node"
+version = "0.1.0"
+description = "A current Flower/TensorFlow CIFAR-10 FedAvg baseline"
+license = "Apache-2.0"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "flwr[simulation]>=1.38.0,<1.39.0",
+    "flwr-datasets[vision]>=0.6.1,<0.7.0",
+    "tensorflow>=2.21.0,<2.22.0",
+    "matplotlib>=3.9",
+    "pandas>=2.2",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["flower_cifar*"]
+
+[tool.flwr.app]
+publisher = "local"
+
+[tool.flwr.app.components]
+serverapp = "flower_cifar.server_app:app"
+clientapp = "flower_cifar.client_app:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 10
+local-epochs = 1
+batch-size = 32
+learning-rate = 0.001
+fraction-train = 1.0
+fraction-evaluate = 1.0
+partition-mode = "iid"
+dirichlet-alpha = 0.5
+malicious-client-id = -1
+seed = 42
+verbose = 0
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+# [tool.flwr.federations]
+# default = "local-simulation"
+
+# [tool.flwr.federations.local-simulation]
+# options.num-supernodes = 5
+# options.backend.client-resources.num-cpus = 1
+# options.backend.client-resources.num-gpus = 0.0
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

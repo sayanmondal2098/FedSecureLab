@@ -1,0 +1,272 @@
+Using pip 26.2.1 from E:\Fedarated LEarnings\.venv\Lib\site-packages\pip (python 3.11)
+Collecting flwr==1.38.0 (from flwr[simulation]==1.38.0)
+  Obtaining dependency information for flwr==1.38.0 from https://files.pythonhosted.org/packages/52/f2/27e4cab1b06d49e56f266d564910a71cd6baffe5f386dfa321621a28b6e6/flwr-1.38.0-py3-none-any.whl.metadata
+  Using cached flwr-1.38.0-py3-none-any.whl.metadata (14 kB)
+  Link requires a different Python (3.11.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/3a/be/650f9c091ef71cb01d735775d554e068752d3ff63d7943b26316dc401749/numpy-1.21.2.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/5f/d6/ad58ded26556eaeaa8c971e08b6466f17c4ac4d786cd3d800e26ce59cc01/numpy-1.21.3.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/fb/48/b0708ebd7718a8933f0d3937513ef8ef2f4f04529f1f66ca86d873043921/numpy-1.21.4.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/c2/a8/a924a09492bdfee8c2ec3094d0a13f2799800b4fdc9c890738aeeb12c72e/numpy-1.21.5.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/45/b7/de7b8e67f2232c26af57c205aaad29fe17754f793404f59c8a730c7a191a/numpy-1.21.6.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.9 not in: '>=3.12'): https://files.pythonhosted.org/packages/d3/e1/f2fe8f6113a657a1da83b358b16755e528a602c6976a43724a88f42b482a/numpy-2.5.0rc1.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+  Link requires a different Python (3.11.9 not in: '>=3.12'): https://files.pythonhosted.org/packages/e7/05/3d27272d30698dc0ecb7fdfaa41ad70303b444f81722bb99bce1d818638a/numpy-2.5.0.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+  Link requires a different Python (3.11.9 not in: '>=3.12'): https://files.pythonhosted.org/packages/22/fd/89965aa4ac08c74998539fcbf24fa3540f3e15237fbeb6bcf9c908f4aade/numpy-2.5.1.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+  Link requires a different Python (3.11.9 not in: '>=3.12'): https://files.pythonhosted.org/packages/9a/80/db0b4559e57ec36362bedbb05530a87fafbcb6067708c946967a41d449e7/numpy-2.5.2.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+  Link requires a different Python (3.11.9 not in: '>=3.12'): https://files.pythonhosted.org/packages/13/01/11703282db468b85f6f7b8c7f22d058de5970d5c7e60a3a8aaa313c3de36/numpy-2.5.3.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+Collecting numpy<3.0.0,>=1.26.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for numpy<3.0.0,>=1.26.0 from https://files.pythonhosted.org/packages/c5/31/7fc6239c12bce7e931463251cca4426c465e1876ba3cc785402ef4dd8f4e/numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata
+  Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+Collecting grpcio<2.0.0,>=1.70.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for grpcio<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/da/1e/da99356b3b573af357d059753a47fba54f1ca1a9c0e4deccd0210cb7f4ba/grpcio-1.84.0-cp311-cp311-win_amd64.whl.metadata
+  Using cached grpcio-1.84.0-cp311-cp311-win_amd64.whl.metadata (3.9 kB)
+Collecting grpcio-health-checking<2.0.0,>=1.70.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/1a/7c/4eb98f1e644b95704ac97693995a8158bd43c3c4030b63c9e980dab7bacb/grpcio_health_checking-1.84.0-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.84.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting protobuf<7.0.0,>=5.28.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for protobuf<7.0.0,>=5.28.0 from https://files.pythonhosted.org/packages/76/5d/683efcd4798e0030c1bab27374fd13a89f7c2515fb1f3123efdfaa5eab57/protobuf-6.33.6-cp310-abi3-win_amd64.whl.metadata
+  Using cached protobuf-6.33.6-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Collecting cryptography<47.0.0,>=46.0.7 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for cryptography<47.0.0,>=46.0.7 from https://files.pythonhosted.org/packages/2b/02/7788f9fefa1d060ca68717c3901ae7fffa21ee087a90b7f23c7a603c32ae/cryptography-46.0.7-cp311-abi3-win_amd64.whl.metadata
+  Using cached cryptography-46.0.7-cp311-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting pycryptodome<4.0.0,>=3.18.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pycryptodome<4.0.0,>=3.18.0 from https://files.pythonhosted.org/packages/54/2f/e97a1b8294db0daaa87012c24a7bb714147c7ade7656973fd6c736b484ff/pycryptodome-3.23.0-cp37-abi3-win_amd64.whl.metadata
+  Using cached pycryptodome-3.23.0-cp37-abi3-win_amd64.whl.metadata (3.5 kB)
+Collecting iterators<0.0.3,>=0.0.2 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for iterators<0.0.3,>=0.0.2 from https://files.pythonhosted.org/packages/ac/61/582052d25f2bdfbc169655392363a451ca6cf3492d204bbf0079be91bf1c/iterators-0.0.2-py3-none-any.whl.metadata
+  Using cached iterators-0.0.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting typer<0.21.0,>=0.13.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for typer<0.21.0,>=0.13.0 from https://files.pythonhosted.org/packages/c8/52/1f2df7e7d1be3d65ddc2936d820d4a3d9777a54f4204f5ca46b8513eff77/typer-0.20.1-py3-none-any.whl.metadata
+  Using cached typer-0.20.1-py3-none-any.whl.metadata (16 kB)
+Collecting uv<0.12.0,>=0.11.15 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for uv<0.12.0,>=0.11.15 from https://files.pythonhosted.org/packages/dd/be/b90df95297cdae2cbd5a83fddf429a304b17a0e9c277ca02190d995cbe09/uv-0.11.33-py3-none-win_amd64.whl.metadata
+  Using cached uv-0.11.33-py3-none-win_amd64.whl.metadata (11 kB)
+Collecting tomli<3.0.0,>=2.0.1 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for tomli<3.0.0,>=2.0.1 from https://files.pythonhosted.org/packages/42/59/71461df1a885647e10b6bb7802d0b8e66480c61f3f43079e0dcd315b3954/tomli-2.4.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached tomli-2.4.1-cp311-cp311-win_amd64.whl.metadata (10 kB)
+Collecting tomli-w<2.0.0,>=1.0.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for tomli-w<2.0.0,>=1.0.0 from https://files.pythonhosted.org/packages/c7/18/c86eb8e0202e32dd3df50d43d7ff9854f8e0603945ff398974c1d91ac1ef/tomli_w-1.2.0-py3-none-any.whl.metadata
+  Using cached tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting pathspec<2.0.0,>=1.0.4 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pathspec<2.0.0,>=1.0.4 from https://files.pythonhosted.org/packages/f1/d9/7fb5aa316bc299258e68c73ba3bddbc499654a07f151cba08f6153988714/pathspec-1.1.1-py3-none-any.whl.metadata
+  Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting prompt-toolkit<4.0.0,>=3.0.52 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for prompt-toolkit<4.0.0,>=3.0.52 from https://files.pythonhosted.org/packages/54/6f/84908cad2d6aa5144abcf7b42709fe4fdb459bc640ec7ac5786e7693dabc/prompt_toolkit-3.0.53-py3-none-any.whl.metadata
+  Using cached prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting rich<15.0.0,>=14.0.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for rich<15.0.0,>=14.0.0 from https://files.pythonhosted.org/packages/b3/76/6d163cfac87b632216f71879e6b2cf17163f773ff59c00b5ff4900a80fa3/rich-14.3.4-py3-none-any.whl.metadata
+  Using cached rich-14.3.4-py3-none-any.whl.metadata (18 kB)
+Collecting pyyaml<7.0.0,>=6.0.2 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pyyaml<7.0.0,>=6.0.2 from https://files.pythonhosted.org/packages/da/e3/ea007450a105ae919a72393cb06f122f288ef60bba2dc64b26e2646fa315/pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata
+  Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+Collecting requests<3.0.0,>=2.33.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for requests<3.0.0,>=2.33.0 from https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl.metadata
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting httpx<1.0.0,>=0.28.1 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for httpx<1.0.0,>=0.28.1 from https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl.metadata
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting click<9.0.0,>=8.0.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for click<9.0.0,>=8.0.0 from https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl.metadata
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting packaging<26.0,>=24.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for packaging<26.0,>=24.0 from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting sqlalchemy<3.0.0,>=2.0.45 (from sqlalchemy[asyncio]<3.0.0,>=2.0.45->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for sqlalchemy<3.0.0,>=2.0.45 from https://files.pythonhosted.org/packages/4a/a1/d91a5a3b2637a9ed1b99ba0ed35384404f5cf470dc638e9bab096bae512e/sqlalchemy-2.1.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached sqlalchemy-2.1.1-cp311-cp311-win_amd64.whl.metadata (9.9 kB)
+Collecting alembic<2.0.0,>=1.18.1 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for alembic<2.0.0,>=1.18.1 from https://files.pythonhosted.org/packages/3f/27/78a89b55b0904d222183164e079b4ca56208e94eff1d35ad1f1ad5be9b06/alembic-1.20.0-py3-none-any.whl.metadata
+  Using cached alembic-1.20.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting uvicorn<0.50.0,>=0.49.0 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for uvicorn<0.50.0,>=0.49.0 from https://files.pythonhosted.org/packages/88/fa/e1388bbcf24ef3274f45c0c1c7b501fd14971037c1b6ee23610553307497/uvicorn-0.49.0-py3-none-any.whl.metadata
+  Using cached uvicorn-0.49.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting fastapi<0.139.0,>=0.138.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for fastapi<0.139.0,>=0.138.0 from https://files.pythonhosted.org/packages/f2/b3/38be2c074bdd0c986340db1d72d7b2321b805b1c5a68069aa00b5d31fd02/fastapi-0.138.2-py3-none-any.whl.metadata
+  Using cached fastapi-0.138.2-py3-none-any.whl.metadata (26 kB)
+Collecting starlette<1.4.0,>=1.3.1 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for starlette<1.4.0,>=1.3.1 from https://files.pythonhosted.org/packages/ec/bb/2799cc2ede3ed41131f8975621e7213dfc7ef4acbbaadfa440f32500c370/starlette-1.3.1-py3-none-any.whl.metadata
+  Using cached starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting ray==2.55.1 (from flwr[simulation]==1.38.0)
+  Obtaining dependency information for ray==2.55.1 from https://files.pythonhosted.org/packages/65/52/c16bbdc3e31a5178f97be88966ab56db6f7e04882640c5cf2fee5b87757b/ray-2.55.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached ray-2.55.1-cp311-cp311-win_amd64.whl.metadata (22 kB)
+Collecting filelock (from ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for filelock from https://files.pythonhosted.org/packages/bc/ac/8b9c6dc2aa7e9cf5582e20a337006c3428c3d752c2255dbaca2c78a8be45/filelock-4.0.4-py3-none-any.whl.metadata
+  Using cached filelock-4.0.4-py3-none-any.whl.metadata (2.0 kB)
+Collecting jsonschema (from ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for jsonschema from https://files.pythonhosted.org/packages/69/90/f63fb5873511e014207a475e2bb4e8b2e570d655b00ac19a9a0ca0a385ee/jsonschema-4.26.0-py3-none-any.whl.metadata
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting msgpack<2.0.0,>=1.0.0 (from ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for msgpack<2.0.0,>=1.0.0 from https://files.pythonhosted.org/packages/84/13/f748f0d59f355d196e71a0b32d48d386a9bd311f94d954e666cf7e5b2572/msgpack-1.2.2-cp311-cp311-win_amd64.whl.metadata
+  Using cached msgpack-1.2.2-cp311-cp311-win_amd64.whl.metadata (8.5 kB)
+Collecting Mako (from alembic<2.0.0,>=1.18.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for Mako from https://files.pythonhosted.org/packages/6d/a0/053d6af3e8f871e0073b4a36732d9e65be77a72e5434c31b94f6af78a6bb/mako-1.4.3-py3-none-any.whl.metadata
+  Using cached mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+Collecting typing-extensions>=4.12 (from alembic<2.0.0,>=1.18.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for typing-extensions>=4.12 from https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl.metadata
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting cffi>=2.0.0 (from cryptography<47.0.0,>=46.0.7->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for cffi>=2.0.0 from https://files.pythonhosted.org/packages/73/c0/77ba02423c2f7d7091143c45cd49e0e6575c4c1967394bb542bd923a9b74/cffi-2.1.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached cffi-2.1.1-cp311-cp311-win_amd64.whl.metadata (2.6 kB)
+Collecting pydantic>=2.9.0 (from fastapi<0.139.0,>=0.138.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pydantic>=2.9.0 from https://files.pythonhosted.org/packages/eb/47/c95ffc2009878c7aac0c5e08528022dcb885933252a88b5f170058014464/pydantic-2.13.5-py3-none-any.whl.metadata
+  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi<0.139.0,>=0.138.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for typing-inspection>=0.4.2 from https://files.pythonhosted.org/packages/67/81/4add07e5172b7ac40d8ed5ff580409a7801a4fe26d529bdd915401dabfbe/typing_inspection-0.4.4-py3-none-any.whl.metadata
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi<0.139.0,>=0.138.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for annotated-doc>=0.0.2 from https://files.pythonhosted.org/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl.metadata
+  Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+INFO: pip is looking at multiple versions of grpcio-health-checking to determine which version is compatible with other requirements. This could take a while.
+Collecting grpcio-health-checking<2.0.0,>=1.70.0 (from flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/34/04/06292242afa96f9d0e8627a5d5517bb62cf224b6c2208ecf1f7c1db6f7e9/grpcio_health_checking-1.83.1-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.83.1-py3-none-any.whl.metadata (1.2 kB)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/c6/9c/8922f2a529bf49361b4f70d6d07adfadc07d1a93eb5ee07f6f66a54445e8/grpcio_health_checking-1.83.0-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.83.0-py3-none-any.whl.metadata (1.2 kB)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/ca/8d/5353bd1c2dc8caa2293edf941ea53c90a25619607fa2ee1aefeccf49dd0f/grpcio_health_checking-1.82.2-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.82.2-py3-none-any.whl.metadata (1.2 kB)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/ef/aa/da280870eca03223fb1c15e5c5482ebd42a523a227e496d9b490e8fdaea5/grpcio_health_checking-1.82.1-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.82.1-py3-none-any.whl.metadata (1.2 kB)
+  Obtaining dependency information for grpcio-health-checking<2.0.0,>=1.70.0 from https://files.pythonhosted.org/packages/6e/87/174bbfb5613794862c45b5cdf567fcfb478ad5a3a7b594e11d998656b2f9/grpcio_health_checking-1.81.1-py3-none-any.whl.metadata
+  Using cached grpcio_health_checking-1.81.1-py3-none-any.whl.metadata (1.2 kB)
+Collecting anyio (from httpx<1.0.0,>=0.28.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for anyio from https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl.metadata
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx<1.0.0,>=0.28.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for certifi from https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl.metadata
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1.0.0,>=0.28.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for httpcore==1.* from https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl.metadata
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1.0.0,>=0.28.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for idna from https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl.metadata
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.28.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for h11>=0.16 from https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl.metadata
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting wcwidth>=0.1.4 (from prompt-toolkit<4.0.0,>=3.0.52->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for wcwidth>=0.1.4 from https://files.pythonhosted.org/packages/3c/ff/d884d2ec7dcdc86cda742a86c7160bc726dbccae76d7ae1f9ac833c26680/wcwidth-0.9.1-cp310-abi3-win_amd64.whl.metadata
+  Using cached wcwidth-0.9.1-cp310-abi3-win_amd64.whl.metadata (24 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.33.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for charset_normalizer<4,>=2 from https://files.pythonhosted.org/packages/e3/57/32f0ccea59e8612057c61d6fd22ef2cb63cca93c9fe594094919696ac170/charset_normalizer-3.5.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached charset_normalizer-3.5.1-cp311-cp311-win_amd64.whl.metadata (46 kB)
+Collecting urllib3<3,>=1.26 (from requests<3.0.0,>=2.33.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for urllib3<3,>=1.26 from https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl.metadata
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<15.0.0,>=14.0.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for markdown-it-py>=2.2.0 from https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl.metadata
+  Using cached markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<15.0.0,>=14.0.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pygments<3.0.0,>=2.13.0 from https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl.metadata
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting greenlet>=1 (from sqlalchemy[asyncio]<3.0.0,>=2.0.45->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for greenlet>=1 from https://files.pythonhosted.org/packages/ce/6c/019d2ef898f4b9ac845167f1c6f73229e9a4e2439362a5e2ce50205a19b0/greenlet-3.5.6-cp311-cp311-win_amd64.whl.metadata
+  Using cached greenlet-3.5.6-cp311-cp311-win_amd64.whl.metadata (3.9 kB)
+Collecting shellingham>=1.3.0 (from typer<0.21.0,>=0.13.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for shellingham>=1.3.0 from https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl.metadata
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting colorama>=0.4 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for colorama>=0.4 from https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl.metadata
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting httptools>=0.8.0 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for httptools>=0.8.0 from https://files.pythonhosted.org/packages/cc/94/97b75870dea07b71e3ec535cebe525b08d723152e4c7d13fa887e51f4de2/httptools-0.8.0-cp311-cp311-win_amd64.whl.metadata
+  Using cached httptools-0.8.0-cp311-cp311-win_amd64.whl.metadata (3.7 kB)
+Collecting python-dotenv>=0.13 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for python-dotenv>=0.13 from https://files.pythonhosted.org/packages/0d/17/c5c6b53ddc18f297992099b3d9ec16c855c0ccc83263a21fe4d1c625ec6c/python_dotenv-1.2.3-py3-none-any.whl.metadata
+  Using cached python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for watchfiles>=0.20 from https://files.pythonhosted.org/packages/48/a1/1c4a1b3c8030cd03206232612be8a6e8799093490c220b0fcb935d02b75a/watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata
+  Using cached watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]<0.50.0,>=0.49.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for websockets>=10.4 from https://files.pythonhosted.org/packages/01/a2/cdf3b551f0b9177023afd3a45d3b431a0d4064951008c4321a8b42ac2288/websockets-17.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached websockets-17.1-cp311-cp311-win_amd64.whl.metadata (6.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography<47.0.0,>=46.0.7->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pycparser from https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl.metadata
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<15.0.0,>=14.0.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for mdurl~=0.1 from https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl.metadata
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi<0.139.0,>=0.138.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for annotated-types>=0.6.0 from https://files.pythonhosted.org/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl.metadata
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic>=2.9.0->fastapi<0.139.0,>=0.138.0->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for pydantic-core==2.46.5 from https://files.pythonhosted.org/packages/9e/c2/718b9deb4b72453b5d8c7447a3b14cb77bef36917ef5f514e0948a4096a0/pydantic_core-2.46.5-cp311-cp311-win_amd64.whl.metadata
+  Using cached pydantic_core-2.46.5-cp311-cp311-win_amd64.whl.metadata (6.7 kB)
+Collecting attrs>=22.2.0 (from jsonschema->ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for attrs>=22.2.0 from https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl.metadata
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for jsonschema-specifications>=2023.03.6 from https://files.pythonhosted.org/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema->ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for referencing>=0.28.4 from https://files.pythonhosted.org/packages/2c/58/ca301544e1fa93ed4f80d724bf5b194f6e4b945841c5bfd555878eea9fcb/referencing-0.37.0-py3-none-any.whl.metadata
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema->ray==2.55.1->flwr[simulation]==1.38.0)
+  Obtaining dependency information for rpds-py>=0.25.0 from https://files.pythonhosted.org/packages/f2/b7/b7a1695d7af36f521fb11e80d6d3adbd744f73b921859bd3c2a2c0dc706f/rpds_py-2026.6.3-cp311-cp311-win_amd64.whl.metadata
+  Using cached rpds_py-2026.6.3-cp311-cp311-win_amd64.whl.metadata (4.2 kB)
+Collecting MarkupSafe>=2.0 (from Mako->alembic<2.0.0,>=1.18.1->flwr==1.38.0->flwr[simulation]==1.38.0)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/83/8a/4414c03d3f891739326e1783338e48fb49781cc915b2e0ee052aa490d586/markupsafe-3.0.3-cp311-cp311-win_amd64.whl.metadata
+  Using cached markupsafe-3.0.3-cp311-cp311-win_amd64.whl.metadata (2.8 kB)
+Using cached flwr-1.38.0-py3-none-any.whl (1.2 MB)
+Using cached ray-2.55.1-cp311-cp311-win_amd64.whl (27.9 MB)
+Using cached alembic-1.20.0-py3-none-any.whl (268 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Using cached cryptography-46.0.7-cp311-abi3-win_amd64.whl (3.5 MB)
+Using cached fastapi-0.138.2-py3-none-any.whl (129 kB)
+Using cached grpcio-1.84.0-cp311-cp311-win_amd64.whl (5.3 MB)
+Using cached grpcio_health_checking-1.81.1-py3-none-any.whl (19 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached iterators-0.0.2-py3-none-any.whl (3.9 kB)
+Using cached msgpack-1.2.2-cp311-cp311-win_amd64.whl (71 kB)
+Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl (12.6 MB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pathspec-1.1.1-py3-none-any.whl (57 kB)
+Using cached prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Using cached protobuf-6.33.6-cp310-abi3-win_amd64.whl (437 kB)
+Using cached pycryptodome-3.23.0-cp37-abi3-win_amd64.whl (1.8 MB)
+Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached charset_normalizer-3.5.1-cp311-cp311-win_amd64.whl (206 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached rich-14.3.4-py3-none-any.whl (310 kB)
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Using cached sqlalchemy-2.1.1-cp311-cp311-win_amd64.whl (2.4 MB)
+Using cached starlette-1.3.1-py3-none-any.whl (73 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached tomli-2.4.1-cp311-cp311-win_amd64.whl (108 kB)
+Using cached tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+Using cached typer-0.20.1-py3-none-any.whl (47 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading uv-0.11.33-py3-none-win_amd64.whl (20.2 MB)
+   ---------------------------------------- 20.2/20.2 MB 35.0 kB/s  0:01:20
+Downloading uvicorn-0.49.0-py3-none-any.whl (71 kB)
+Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading cffi-2.1.1-cp311-cp311-win_amd64.whl (185 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading greenlet-3.5.6-cp311-cp311-win_amd64.whl (323 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httptools-0.8.0-cp311-cp311-win_amd64.whl (90 kB)
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.5-cp311-cp311-win_amd64.whl (2.0 MB)
+   ---------------------------------------- 2.0/2.0 MB 6.0 MB/s  0:00:00
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Downloading wcwidth-0.9.1-cp310-abi3-win_amd64.whl (596 kB)
+   ---------------------------------------- 596.7/596.7 kB 301.7 kB/s  0:00:01
+Downloading websockets-17.1-cp311-cp311-win_amd64.whl (217 kB)
+Downloading filelock-4.0.4-py3-none-any.whl (108 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-2026.6.3-cp311-cp311-win_amd64.whl (223 kB)
+Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-win_amd64.whl (15 kB)
+Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+Installing collected packages: websockets, wcwidth, uv, urllib3, typing-extensions, tomli-w, tomli, shellingham, rpds-py, pyyaml, python-dotenv, pygments, pycryptodome, pycparser, protobuf, pathspec, packaging, numpy, msgpack, mdurl, MarkupSafe, iterators, idna, httptools, h11, greenlet, filelock, colorama, click, charset_normalizer, certifi, attrs, annotated-types, annotated-doc, uvicorn, typing-inspection, sqlalchemy, requests, referencing, pydantic-core, prompt-toolkit, markdown-it-py, Mako, httpcore, grpcio, cffi, anyio, watchfiles, starlette, rich, pydantic, jsonschema-specifications, httpx, grpcio-health-checking, cryptography, alembic, typer, jsonschema, fastapi, ray, flwr
+

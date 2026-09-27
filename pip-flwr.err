@@ -1,0 +1,19 @@
+ERROR: Could not install packages due to an OSError.
+Check the permissions.
+Traceback (most recent call last):
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\commands\install.py", line 556, in run
+    installed = install_given_reqs(
+                ^^^^^^^^^^^^^^^^^^^
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\req\__init__.py", line 85, in install_given_reqs
+    requirement.install(
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\req\req_install.py", line 794, in install
+    install_wheel(
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\operations\install\wheel.py", line 754, in install_wheel
+    _install_wheel(
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\operations\install\wheel.py", line 605, in _install_wheel
+    file.save()
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\operations\install\wheel.py", line 383, in save
+    self._file.save()
+  File "E:\Fedarated LEarnings\.venv\Lib\site-packages\pip\_internal\operations\install\wheel.py", line 359, in save
+    os.unlink(self.dest_path)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'E:\\Fedarated LEarnings\\.venv\\Scripts\\uv.exe'

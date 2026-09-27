@@ -1,0 +1,13 @@
+.venv/
+venv/
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+results/*.csv
+results/*.png
+results/*.json
+results/*.keras
+
+.flwr
+.flwr/

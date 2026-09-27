@@ -1,0 +1,11 @@
+# Runtime dependencies for the Flower TensorFlow CIFAR-10 baseline.
+# Python 3.11–3.13 is required; Python 3.11 is used for verification.
+flwr[simulation]>=1.38.0,<1.39.0
+flwr-datasets[vision]>=0.6.1,<0.7.0
+tensorflow>=2.21.0,<2.22.0
+matplotlib>=3.9
+pandas>=2.2
+python-dotenv>=1.0
+
+# Development and verification
+pytest>=8.0
