@@ -11,6 +11,8 @@ results/*.keras
 
 .flwr
 .flwr/
+.flwr-smoke/
+.flwr-runs/
 .cache
 .cache/
 

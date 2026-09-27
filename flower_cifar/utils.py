@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 from pathlib import Path
 from typing import Any
@@ -10,7 +11,7 @@ from typing import Any
 import numpy as np
 from dotenv import load_dotenv
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(os.getenv("FEDSECURELAB_PROJECT_ROOT", Path(__file__).resolve().parents[1])).resolve()
 load_dotenv(PROJECT_ROOT / ".env")
 RESULTS_DIR = PROJECT_ROOT / "results"
 CLIENT_METRICS_DIR = RESULTS_DIR / "client_round_metrics"

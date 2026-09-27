@@ -20,7 +20,10 @@ if (-not (Test-Path -LiteralPath $python)) {
 
 $env:Path = "$projectRoot\.venv\Scripts;$env:Path"
 $env:PYTHONUTF8 = '1'
-$env:FLWR_HOME = Join-Path $projectRoot '.flwr'
+$env:FEDSECURELAB_PROJECT_ROOT = $projectRoot
+$runStamp = Get-Date -Format 'yyyyMMdd-HHmmss'
+$flwrHomeBase = Join-Path $env:LOCALAPPDATA 'FedSecureLab\flwr-runs'
+$env:FLWR_HOME = Join-Path $flwrHomeBase $runStamp
 $env:TEMP = Join-Path $projectRoot '.runtime-tmp'
 $env:TMP = $env:TEMP
 $env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO = '0'
