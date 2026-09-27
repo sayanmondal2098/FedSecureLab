@@ -11,3 +11,5 @@ results/*.keras
 
 .flwr
 .flwr/
+.cache
+.cache/
