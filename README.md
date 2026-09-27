@@ -109,6 +109,14 @@ Quick smoke test:
 - Set `NUM_SERVER_ROUNDS=2` for a short verification run.
 - Use `NUM_SERVER_ROUNDS=10` for the baseline experiment.
 
+Poisoning and comparison options:
+
+- `POISON_MODE=none|label_flip|gaussian_noise`
+- `POISON_CLIENT_IDS=1,3` (comma-separated client IDs)
+- `POISON_LABEL_FLIP_OFFSET=1` (used by `label_flip`)
+- `POISON_NOISE_STD=0.15` (used by `gaussian_noise`)
+- `EXPERIMENT_TAG=clean|poisoned` (snapshot label for dashboard comparison)
+
 ## Run Simulation
 
 Windows launcher:
@@ -139,6 +147,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\open_web.ps1
 Default URL:
 
 - http://localhost:8000/federation-process.html
+
+Side-by-side clean vs poisoned comparison workflow:
+
+1. Run with `POISON_MODE=none` and `EXPERIMENT_TAG=clean`.
+2. Run with poisoning enabled and `EXPERIMENT_TAG=poisoned`.
+3. Open the dashboard to compare both runs in the comparison panel.
 
 ## Validate Setup
 

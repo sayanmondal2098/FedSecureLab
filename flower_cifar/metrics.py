@@ -9,7 +9,7 @@ from typing import Any
 
 from flower_cifar.utils import CLIENT_METRICS_DIR, RESULTS_DIR, ensure_results_dir
 
-CLIENT_COLUMNS = ["round", "client_id", "train_loss", "train_accuracy", "val_loss", "val_accuracy", "num_samples"]
+CLIENT_COLUMNS = ["round", "client_id", "train_loss", "train_accuracy", "val_loss", "val_accuracy", "num_samples", "poisoned", "poison_mode"]
 GLOBAL_COLUMNS = ["round", "global_loss", "global_accuracy"]
 
 

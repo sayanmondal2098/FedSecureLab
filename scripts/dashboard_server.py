@@ -11,6 +11,7 @@ from urllib.parse import urlparse
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = PROJECT_ROOT / "results"
 CLIENT_METRICS_DIR = RESULTS_DIR / "client_round_metrics"
+COMPARISON_DIR = RESULTS_DIR / "comparison"
 
 
 def read_metrics() -> dict[str, list[dict[str, object]]]:
@@ -47,6 +48,34 @@ def read_metrics() -> dict[str, list[dict[str, object]]]:
     return {"clients": clients, "global": global_rows, "statuses": statuses, "phase": phase}
 
 
+def _read_csv_rows(path: Path) -> list[dict[str, object]]:
+    if not path.exists():
+        return []
+    try:
+        with path.open(newline="", encoding="utf-8") as handle:
+            return list(csv.DictReader(handle))
+    except OSError:
+        return []
+
+
+def _read_tagged_snapshot(tag: str) -> dict[str, object]:
+    snapshot = COMPARISON_DIR / tag
+    return {
+        "tag": tag,
+        "global": _read_csv_rows(snapshot / "global_metrics.csv"),
+        "clients": _read_csv_rows(snapshot / "client_metrics.csv"),
+        "metrics": _read_csv_rows(snapshot / "metrics.csv"),
+        "exists": snapshot.exists(),
+    }
+
+
+def read_comparison() -> dict[str, object]:
+    return {
+        "clean": _read_tagged_snapshot("clean"),
+        "poisoned": _read_tagged_snapshot("poisoned"),
+    }
+
+
 def reset_live_metrics() -> None:
     """Clear only disposable dashboard data before a new simulation starts."""
     for path in list(CLIENT_METRICS_DIR.glob("*.json")) if CLIENT_METRICS_DIR.exists() else []:
@@ -67,8 +96,18 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(PROJECT_ROOT), **kwargs)
 
     def do_GET(self) -> None:
-        if urlparse(self.path).path == "/api/metrics":
+        path = urlparse(self.path).path
+        if path == "/api/metrics":
             payload = json.dumps(read_metrics()).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+        if path == "/api/comparison":
+            payload = json.dumps(read_comparison()).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Cache-Control", "no-store")

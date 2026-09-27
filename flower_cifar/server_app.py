@@ -63,8 +63,8 @@ def _write_metadata(context: Context) -> None:
 def main(grid: Grid, context: Context) -> None:
     """Initialize the shared CNN, run five-node FedAvg, and persist artifacts."""
     run = context.run_config
-    if int(run.get("malicious-client-id", -1)) >= 0:
-        print("Note: malicious-client-id is an extension hook only; attacks are disabled in this baseline.")
+    poison_mode = str(run.get("poison-mode", "none"))
+    poison_clients = str(run.get("poison-client-ids", ""))
     set_global_seed(int(run["seed"]))
     configure_tensorflow_gpu()
     ensure_results_dir()
@@ -76,6 +76,7 @@ def main(grid: Grid, context: Context) -> None:
     batch_size = int(run["batch-size"])
     print("\nExperiment: Flower TensorFlow CIFAR-10 Baseline")
     print(f"Clients: {NUM_CLIENTS}\nPartitioning: IID\nAggregation: FedAvg\nRounds: {rounds}\nLocal Epochs: {run['local-epochs']}\nBatch Size: {batch_size}\nSeed: {run['seed']}")
+    print(f"Poison mode: {poison_mode} | Poison clients: {poison_clients if poison_clients else 'none'}")
     model = create_model(learning_rate)
     global_records: list[dict[str, float]] = []
     strategy = LoggingFedAvg(

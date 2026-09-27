@@ -44,14 +44,58 @@ $federationConfig = "num-supernodes=$env:FLWR_NUM_SUPERNODES client-resources-nu
 # Keep string-valued research hooks in pyproject.toml for now. Passing them
 # through PowerShell to a native executable strips TOML quote characters on
 # some Windows hosts. The numeric baseline settings below are safe overrides.
-$runConfig = "num-server-rounds=$env:NUM_SERVER_ROUNDS local-epochs=$env:LOCAL_EPOCHS batch-size=$env:BATCH_SIZE learning-rate=$env:LEARNING_RATE seed=$env:SEED"
+$poisonMode = if ($env:POISON_MODE) { $env:POISON_MODE } else { 'none' }
+$poisonClientIds = if ($env:POISON_CLIENT_IDS) { $env:POISON_CLIENT_IDS } else { '' }
+$poisonLabelFlipOffset = if ($env:POISON_LABEL_FLIP_OFFSET) { $env:POISON_LABEL_FLIP_OFFSET } else { '1' }
+$poisonNoiseStd = if ($env:POISON_NOISE_STD) { $env:POISON_NOISE_STD } else { '0.15' }
+$runConfig = "num-server-rounds=$env:NUM_SERVER_ROUNDS local-epochs=$env:LOCAL_EPOCHS batch-size=$env:BATCH_SIZE learning-rate=$env:LEARNING_RATE seed=$env:SEED poison-mode=$poisonMode poison-client-ids=$poisonClientIds poison-label-flip-offset=$poisonLabelFlipOffset poison-noise-std=$poisonNoiseStd"
+
+$experimentTag = if ($env:EXPERIMENT_TAG) { $env:EXPERIMENT_TAG.Trim() } else { '' }
+$resultsRoot = Join-Path $projectRoot 'results'
+
+function Save-ComparisonSnapshot {
+  param(
+    [string]$Tag,
+    [string]$SourceRoot,
+    [string]$DestRoot
+  )
+
+  if (-not $Tag) {
+    return
+  }
+
+  $safeTag = ($Tag -replace '[^A-Za-z0-9._-]', '_')
+  $targetDir = Join-Path (Join-Path $DestRoot 'comparison') $safeTag
+  if (Test-Path -LiteralPath $targetDir) {
+    Remove-Item -LiteralPath $targetDir -Recurse -Force
+  }
+  New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
+
+  $items = @('client_metrics.csv', 'global_metrics.csv', 'metrics.csv', 'config.json', 'client_round_metrics')
+  foreach ($name in $items) {
+    $src = Join-Path $SourceRoot $name
+    if (Test-Path -LiteralPath $src) {
+      Copy-Item -LiteralPath $src -Destination (Join-Path $targetDir $name) -Recurse -Force
+    }
+  }
+
+  Write-Host "Saved comparison snapshot: results/comparison/$safeTag"
+}
+
+$runExitCode = 1
 
 try {
   & $python -m flwr.cli.app run $projectRoot --stream `
     --federation-config $federationConfig `
     --run-config $runConfig
+  $runExitCode = $LASTEXITCODE
 } finally {
   if (-not $dashboard.HasExited) {
     Stop-Process -Id $dashboard.Id -Force
   }
+  if ($runExitCode -eq 0) {
+    Save-ComparisonSnapshot -Tag $experimentTag -SourceRoot $resultsRoot -DestRoot $resultsRoot
+  }
 }
+
+exit $runExitCode
