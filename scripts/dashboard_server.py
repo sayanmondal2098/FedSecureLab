@@ -295,6 +295,17 @@ class DashboardHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(PROJECT_ROOT), **kwargs)
 
+    def end_headers(self) -> None:
+        # The dashboard is edited frequently during experiments. Do not let a
+        # browser reuse an older HTML/JavaScript table layout after a restart.
+        if urlparse(self.path).path.endswith(".html"):
+            self.send_header("Cache-Control", "no-store, max-age=0")
+        super().end_headers()
+
+    def log_message(self, format: str, *args: object) -> None:
+        """Suppress noisy per-request access logs from 1s dashboard polling."""
+        return
+
     def do_GET(self) -> None:
         path = urlparse(self.path).path
         if path == "/api/metrics":

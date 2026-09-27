@@ -154,8 +154,23 @@
 
   <script>
     const stages = ["broadcast", "train", "aggregate", "evaluate"];
-    const pct = (v) => (Number(v) * 100).toFixed(2) + "%";
-    const num = (v) => Number(v).toFixed(4);
+    const toFinite = (v) => {
+      const n = Number(v);
+      return Number.isFinite(n) ? n : null;
+    };
+    const pct = (v) => {
+      const n = toFinite(v);
+      return n === null ? "-" : (n * 100).toFixed(2) + "%";
+    };
+    const num = (v) => {
+      const n = toFinite(v);
+      return n === null ? "-" : n.toFixed(4);
+    };
+    const isPoisoned = (v) => {
+      if (typeof v === "boolean") return v;
+      const s = String(v).trim().toLowerCase();
+      return s === "true" || s === "1" || s === "yes";
+    };
 
     function setStage(stage) { stages.forEach((s) => document.querySelector("#" + s).classList.toggle("active", s === stage)); }
 
@@ -219,7 +234,7 @@
       drawLine("#liveChart", globalRows, "global_accuracy", "line-live", "#liveLegend");
     }
 
-    function renderComparison(payload) {
+    function renderComparison(payload, live, runState) {
       const clean = (payload.clean || {}).global || [];
       const poison = (payload.poisoned || {}).global || [];
       const cleanLast = clean.at(-1);
@@ -246,15 +261,20 @@
       }
       drawCompare(clean, poison);
 
-      const combined = clean.map((r) => ({...r, experiment: "clean"}))
-        .concat(poison.map((r) => ({...r, experiment: "poisoned"})))
+      const cleanClients = (payload.clean || {}).clients || [];
+      const savedPoisonClients = (payload.poisoned || {}).clients || [];
+      const livePoisonClients = (live && live.clients) || [];
+      const useLivePoison = Boolean(runState && runState.running && runState.phase === "poisoned" && livePoisonClients.length);
+      const poisonClients = useLivePoison ? livePoisonClients : savedPoisonClients;
+      const combined = cleanClients.map((r) => ({...r, experiment: "clean"}))
+        .concat(poisonClients.map((r) => ({...r, experiment: "poisoned"})))
         .sort((a, b) => String(b.experiment).localeCompare(String(a.experiment)) || Number(b.round) - Number(a.round) || Number(a.client_id) - Number(b.client_id));
       document.querySelector("#rows").innerHTML = combined.length ? combined.map((r) => {
-        const poisoned = String(r.poisoned).toLowerCase() === "true";
+        const poisoned = isPoisoned(r.poisoned);
         const poisonText = poisoned ? (r.poison_mode || "yes") : "no";
         const tag = r.experiment === "clean" ? "clean" : "poison";
         return "<tr><td><span class=\"tag " + tag + "\">" + r.experiment + "</span></td><td>" + r.round + "</td><td>" + r.client_id + "</td><td>" + pct(r.train_accuracy) + "</td><td>" + pct(r.val_accuracy) + "</td><td>" + num(r.train_loss) + "</td><td>" + poisonText + "</td></tr>";
-      }).join("") : '<tr><td colspan="7" class="muted">Waiting for saved clean or poisoned metrics...</td></tr>';
+      }).join("") : '<tr><td colspan="7" class="muted">Waiting for clean or poisoned client metrics...</td></tr>';
     }
 
     function renderState(state) {
@@ -313,7 +333,7 @@
           fetch("/api/run-state", { cache: "no-store" }).then((r) => r.json()),
         ]);
         renderLive(live);
-        renderComparison(comparison);
+        renderComparison(comparison, live, runState);
         renderState(runState);
       } catch {
         document.querySelector("#status").textContent = "Dashboard connection interrupted; retrying...";

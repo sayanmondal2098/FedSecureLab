@@ -1,1 +1,0 @@
-{"client_id": 4, "num_samples": 8000, "poison_mode": "none", "poisoned": false, "round": 9, "train_accuracy": 0.5998749732971191, "train_loss": 1.136038064956665, "val_accuracy": 0.5680000185966492, "val_loss": 1.2001506090164185}
