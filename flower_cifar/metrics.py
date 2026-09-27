@@ -22,6 +22,9 @@ def clear_live_metrics() -> None:
             path.unlink()
     for path in RESULTS_DIR.glob("client_status_*.json"):
         path.unlink()
+    phase_path = RESULTS_DIR / "live_phase.json"
+    if phase_path.exists():
+        phase_path.unlink()
 
 
 def write_client_status(client_id: int, round_number: int, state: str) -> None:
@@ -29,6 +32,14 @@ def write_client_status(client_id: int, round_number: int, state: str) -> None:
     ensure_results_dir()
     path = RESULTS_DIR / f"client_status_{client_id}.json"
     path.write_text(json.dumps({"client_id": client_id, "round": round_number, "state": state}), encoding="utf-8")
+
+
+def write_live_phase(round_number: int, phase: str) -> None:
+    """Publish the server's current FedAvg phase for the live dashboard."""
+    ensure_results_dir()
+    (RESULTS_DIR / "live_phase.json").write_text(
+        json.dumps({"round": round_number, "phase": phase}), encoding="utf-8"
+    )
 
 
 def write_client_metric(metric: dict[str, Any]) -> None:

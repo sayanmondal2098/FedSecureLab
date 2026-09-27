@@ -37,7 +37,14 @@ def read_metrics() -> dict[str, list[dict[str, object]]]:
             statuses.append(json.loads(path.read_text(encoding="utf-8")))
         except (OSError, json.JSONDecodeError):
             continue
-    return {"clients": clients, "global": global_rows, "statuses": statuses}
+    phase: dict[str, object] = {}
+    phase_path = RESULTS_DIR / "live_phase.json"
+    if phase_path.exists():
+        try:
+            phase = json.loads(phase_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            pass
+    return {"clients": clients, "global": global_rows, "statuses": statuses, "phase": phase}
 
 
 def reset_live_metrics() -> None:
@@ -50,6 +57,9 @@ def reset_live_metrics() -> None:
         path = RESULTS_DIR / filename
         if path.exists():
             path.unlink()
+    phase_path = RESULTS_DIR / "live_phase.json"
+    if phase_path.exists():
+        phase_path.unlink()
 
 
 class DashboardHandler(SimpleHTTPRequestHandler):

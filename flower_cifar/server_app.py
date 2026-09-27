@@ -10,7 +10,7 @@ from flwr.serverapp import Grid, ServerApp
 from flwr.serverapp.strategy import FedAvg
 
 from flower_cifar.dataset import NUM_CLIENTS, load_global_test_data
-from flower_cifar.metrics import clear_live_metrics, collect_client_metrics, write_combined_metrics, write_global_metrics
+from flower_cifar.metrics import clear_live_metrics, collect_client_metrics, write_combined_metrics, write_global_metrics, write_live_phase
 from flower_cifar.model import create_model
 from flower_cifar.utils import RESULTS_DIR, configure_tensorflow_gpu, ensure_results_dir, set_global_seed, write_json
 
@@ -25,6 +25,7 @@ class LoggingFedAvg(FedAvg):
     """
 
     def aggregate_train(self, server_round: int, replies: Iterable[Message]):
+        write_live_phase(server_round, "aggregate")
         arrays, metrics = super().aggregate_train(server_round, replies)
         print(f"FedAvg aggregation completed for round {server_round}.")
         return arrays, metrics
@@ -35,6 +36,7 @@ def _global_evaluator(learning_rate: float, batch_size: int, records: list[dict[
     x_test, y_test = load_global_test_data()
 
     def evaluate(server_round: int, arrays: ArrayRecord) -> MetricRecord:
+        write_live_phase(server_round, "evaluate")
         model = create_model(learning_rate)
         model.set_weights(arrays.to_numpy_ndarrays())
         loss, accuracy = model.evaluate(x_test, y_test, batch_size=batch_size, verbose=0)
@@ -69,6 +71,7 @@ def main(grid: Grid, context: Context) -> None:
     clear_live_metrics()
     _write_metadata(context)
     rounds = int(run["num-server-rounds"])
+    write_live_phase(1, "broadcast")
     learning_rate = float(run["learning-rate"])
     batch_size = int(run["batch-size"])
     print("\nExperiment: Flower TensorFlow CIFAR-10 Baseline")

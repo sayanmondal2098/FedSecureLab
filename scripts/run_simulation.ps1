@@ -41,6 +41,8 @@ try {
     --federation-config $federationConfig `
     --run-config $runConfig
 } finally {
+  # Keep the final Evaluate state visible before ending the local dashboard.
+  Start-Sleep -Seconds 15
   if (-not $dashboard.HasExited) {
     Stop-Process -Id $dashboard.Id -Force
   }
