@@ -26,8 +26,9 @@ class LoggingFedAvg(FedAvg):
 
     def aggregate_train(self, server_round: int, replies: Iterable[Message]):
         write_live_phase(server_round, "aggregate")
+        print(f"Round {server_round}: received client updates; beginning weighted FedAvg aggregation.")
         arrays, metrics = super().aggregate_train(server_round, replies)
-        print(f"FedAvg aggregation completed for round {server_round}.")
+        print(f"Round {server_round}: FedAvg aggregation completed; preparing global evaluation.")
         return arrays, metrics
 
 
@@ -43,7 +44,7 @@ def _global_evaluator(learning_rate: float, batch_size: int, records: list[dict[
         row = {"round": server_round, "global_loss": float(loss), "global_accuracy": float(accuracy)}
         records.append(row)
         write_global_metrics(records)
-        print(f"Global Test Loss: {loss:.4f} | Global Test Accuracy: {accuracy:.4f}")
+        print(f"Round {server_round}: global evaluation complete | loss={loss:.4f} | accuracy={accuracy:.4f}")
         return MetricRecord(row)
 
     return evaluate
@@ -77,6 +78,7 @@ def main(grid: Grid, context: Context) -> None:
     print("\nExperiment: Flower TensorFlow CIFAR-10 Baseline")
     print(f"Clients: {NUM_CLIENTS}\nPartitioning: IID\nAggregation: FedAvg\nRounds: {rounds}\nLocal Epochs: {run['local-epochs']}\nBatch Size: {batch_size}\nSeed: {run['seed']}")
     print(f"Poison mode: {poison_mode} | Poison clients: {poison_clients if poison_clients else 'none'}")
+    print("Dashboard status files and metric fragments will be updated as each round progresses.")
     model = create_model(learning_rate)
     global_records: list[dict[str, float]] = []
     strategy = LoggingFedAvg(

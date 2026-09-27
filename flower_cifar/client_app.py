@@ -99,8 +99,11 @@ def train(message: Message, context: Context) -> Message:
     round_number = int(message.content["config"].get("server-round", 0))
     write_live_phase(round_number, "train")
     write_client_status(client_id, round_number, "training")
+    print(f"Round {round_number}: client {client_id} started local training.")
     x_train, y_train, x_val, y_val = load_client_data(client_id, num_partitions, int(context.run_config["seed"]))
     x_train, y_train, poisoned, poison_mode = _apply_poisoning(x_train, y_train, context, client_id)
+    if poisoned:
+        print(f"Round {round_number}: client {client_id} is applying {poison_mode} to its configured training subset.")
     model = create_model(learning_rate)
     model.set_weights(message.content["arrays"].to_numpy_ndarrays())
     history = model.fit(x_train, y_train, validation_data=(x_val, y_val), epochs=epochs, batch_size=batch_size, verbose=int(context.run_config.get("verbose", 0)))

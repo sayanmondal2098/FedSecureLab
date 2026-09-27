@@ -8,6 +8,7 @@ import os
 import subprocess
 import tempfile
 import threading
+from datetime import datetime, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -24,12 +25,27 @@ RUN_STATE: dict[str, object] = {
     "message": "Idle",
     "clean_exit_code": None,
     "poisoned_exit_code": None,
+    "logs": [],
 }
 
 
 def _set_state(**kwargs: object) -> None:
     with STATE_LOCK:
         RUN_STATE.update(kwargs)
+
+
+def _log_event(message: str, level: str = "info") -> None:
+    """Keep a small, browser-readable timeline of the comparison runner."""
+    event = {
+        "time": datetime.now(timezone.utc).astimezone().strftime("%H:%M:%S"),
+        "level": level,
+        "message": message,
+    }
+    with STATE_LOCK:
+        logs = list(RUN_STATE.get("logs", []))
+        logs.append(event)
+        RUN_STATE["logs"] = logs[-80:]
+    print(f"[dashboard:{level}] {message}", flush=True)
 
 
 def _read_state() -> dict[str, object]:
@@ -71,6 +87,7 @@ def _save_snapshot(tag: str) -> None:
     if src_dir.exists():
         for file in src_dir.glob("*.json"):
             (dst_dir / file.name).write_bytes(file.read_bytes())
+    _log_event(f"Saved {tag} snapshot with completed metrics; it will remain available during the next run.")
 
 
 def _build_run_config(env: dict[str, str], override: dict[str, str]) -> str:
@@ -97,6 +114,7 @@ def _build_run_config(env: dict[str, str], override: dict[str, str]) -> str:
 def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag: str, phase_name: str) -> int:
     reset_live_metrics()
     _set_state(phase=phase_name, message=f"Running {phase_name} experiment")
+    _log_event(f"Starting {phase_name} experiment ({override.get('NUM_SERVER_ROUNDS', '?')} rounds).")
 
     flwr_home = Path(os.environ.get("LOCALAPPDATA", tempfile.gettempdir())) / "FedSecureLab" / "flwr-runs" / f"dashboard-{tag}"
     flwr_home.mkdir(parents=True, exist_ok=True)
@@ -130,6 +148,9 @@ def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag:
     proc = subprocess.run(cmd, cwd=str(PROJECT_ROOT), env=runtime_env)
     if proc.returncode == 0:
         _save_snapshot(tag)
+        _log_event(f"{phase_name.capitalize()} experiment completed successfully.")
+    else:
+        _log_event(f"{phase_name.capitalize()} experiment exited with code {proc.returncode}.", "error")
     return proc.returncode
 
 
@@ -143,7 +164,8 @@ def run_comparison(payload: dict[str, object]) -> None:
     poison_label_flip_offset = str(payload.get("poison_label_flip_offset", base_env.get("POISON_LABEL_FLIP_OFFSET", "1")))
     poison_noise_std = str(payload.get("poison_noise_std", base_env.get("POISON_NOISE_STD", "0.15")))
 
-    _set_state(running=True, phase="starting", message="Starting clean then poisoned experiments", clean_exit_code=None, poisoned_exit_code=None)
+    _set_state(running=True, phase="starting", message="Starting clean then poisoned experiments", clean_exit_code=None, poisoned_exit_code=None, logs=[])
+    _log_event("Comparison requested. Clean data will be saved before poisoned training begins.")
     try:
         clean_override = {
             "NUM_SERVER_ROUNDS": rounds,
@@ -169,6 +191,7 @@ def run_comparison(payload: dict[str, object]) -> None:
             "POISON_LABEL_FLIP_OFFSET": poison_label_flip_offset,
             "POISON_NOISE_STD": poison_noise_std,
         }
+        _log_event("Clean snapshot is preserved. Switching to poisoned experiment.")
         poison_code = _run_one_experiment(base_env, poison_override, "poisoned", "poisoned")
         _set_state(poisoned_exit_code=poison_code)
         if poison_code != 0:
@@ -176,8 +199,10 @@ def run_comparison(payload: dict[str, object]) -> None:
             return
 
         _set_state(running=False, phase="done", message="Completed clean and poisoned experiments")
+        _log_event("Comparison finished. Both clean and poisoned rows are available below.")
     except Exception as exc:  # noqa: BLE001
         _set_state(running=False, phase="failed", message=f"Dashboard run failed: {exc}")
+        _log_event(f"Dashboard run failed: {exc}", "error")
 
 
 def launch_comparison(payload: dict[str, object]) -> bool:

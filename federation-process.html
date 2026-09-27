@@ -66,6 +66,8 @@
     .tag.poison { color: #ffb480; }
     .delta.good { color: #8ce4ae; }
     .delta.bad { color: #ff9898; }
+    .log { margin: 0; padding-left: 20px; max-height: 180px; overflow: auto; font: .86rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace; color: #c7d8f5; }
+    .log .error { color: #ff9898; }
     svg { display: block; width: 100%; min-width: 500px; height: 220px; }
     .axis { stroke: #496183; }
     .line-live { fill: none; stroke: #8fd2ff; stroke-width: 3; }
@@ -125,12 +127,15 @@
     <section class="section panel"><h2>Live Global Accuracy</h2><svg id="liveChart" viewBox="0 0 700 220"></svg><div id="liveLegend" class="muted">The chart appears after the first global evaluation.</div></section>
 
     <section class="section panel">
-      <h2>Client Training Activity</h2>
+      <h2>Clean and Poisoned Client Data</h2>
+      <p class="muted">Completed clean rows stay visible while poisoned training runs. Rows are grouped by experiment and newest rounds appear first.</p>
       <table>
-        <thead><tr><th>Round</th><th>Client</th><th>Train accuracy</th><th>Validation accuracy</th><th>Train loss</th><th>Poison</th></tr></thead>
-        <tbody id="rows"><tr><td colspan="6" class="muted">Waiting for client metrics...</td></tr></tbody>
+        <thead><tr><th>Experiment</th><th>Round</th><th>Client</th><th>Train accuracy</th><th>Validation accuracy</th><th>Train loss</th><th>Poison</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="7" class="muted">Waiting for client metrics...</td></tr></tbody>
       </table>
     </section>
+
+    <section class="section panel"><h2>Status Log</h2><ol id="logs" class="log"><li class="muted">Waiting for a comparison to start...</li></ol></section>
 
     <section class="section">
       <h2>Clean vs Poisoned Comparison</h2>
@@ -211,12 +216,6 @@
       document.querySelector("#accuracy").textContent = last ? pct(last.global_accuracy) : "-";
       document.querySelector("#loss").textContent = last ? num(last.global_loss) : "-";
 
-      document.querySelector("#rows").innerHTML = clients.length ? clients.slice().reverse().map((r) => {
-        const poisoned = String(r.poisoned).toLowerCase() === "true";
-        const p = poisoned ? (r.poison_mode || "yes") : "no";
-        return "<tr><td>" + r.round + "</td><td>" + r.client_id + "</td><td>" + pct(r.train_accuracy) + "</td><td>" + pct(r.val_accuracy) + "</td><td>" + num(r.train_loss) + "</td><td>" + p + "</td></tr>";
-      }).join("") : '<tr><td colspan="6" class="muted">Waiting for client metrics...</td></tr>';
-
       drawLine("#liveChart", globalRows, "global_accuracy", "line-live", "#liveLegend");
     }
 
@@ -246,12 +245,26 @@
         lossDeltaEl.className = "delta";
       }
       drawCompare(clean, poison);
+
+      const combined = clean.map((r) => ({...r, experiment: "clean"}))
+        .concat(poison.map((r) => ({...r, experiment: "poisoned"})))
+        .sort((a, b) => String(b.experiment).localeCompare(String(a.experiment)) || Number(b.round) - Number(a.round) || Number(a.client_id) - Number(b.client_id));
+      document.querySelector("#rows").innerHTML = combined.length ? combined.map((r) => {
+        const poisoned = String(r.poisoned).toLowerCase() === "true";
+        const poisonText = poisoned ? (r.poison_mode || "yes") : "no";
+        const tag = r.experiment === "clean" ? "clean" : "poison";
+        return "<tr><td><span class=\"tag " + tag + "\">" + r.experiment + "</span></td><td>" + r.round + "</td><td>" + r.client_id + "</td><td>" + pct(r.train_accuracy) + "</td><td>" + pct(r.val_accuracy) + "</td><td>" + num(r.train_loss) + "</td><td>" + poisonText + "</td></tr>";
+      }).join("") : '<tr><td colspan="7" class="muted">Waiting for saved clean or poisoned metrics...</td></tr>';
     }
 
     function renderState(state) {
       const running = Boolean(state.running);
       document.querySelector("#startBtn").disabled = running;
       document.querySelector("#runState").textContent = "Runner: " + (state.phase || "idle") + " | " + (state.message || "");
+      const logs = state.logs || [];
+      document.querySelector("#logs").innerHTML = logs.length ? logs.slice().reverse().map((entry) =>
+        "<li class=\"" + (entry.level === "error" ? "error" : "") + "\">[" + entry.time + "] " + entry.message + "</li>"
+      ).join("") : '<li class="muted">Waiting for a comparison to start...</li>';
     }
 
     function buildPayload() {
