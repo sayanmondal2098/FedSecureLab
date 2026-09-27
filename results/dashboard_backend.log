@@ -8,3 +8,55 @@
 [2026-09-27T19:13:01.386050+05:30] [INFO] Clean experiment completed successfully.
 [2026-09-27T19:13:01.386050+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
 [2026-09-27T19:13:01.389070+05:30] [INFO] Starting poisoned experiment (4 rounds).
+[2026-09-27T23:07:29.974850+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:07:29.974850+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:07:40.625604+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-27T23:07:40.625604+05:30] [INFO] Starting clean experiment (10 rounds).
+[2026-09-27T23:34:48.396002+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:34:48.396002+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:35:18.764014+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-27T23:35:18.765528+05:30] [INFO] Starting clean experiment (5 rounds).
+[2026-09-27T23:46:13.335989+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:46:13.341234+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:46:40.436995+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-27T23:46:40.438976+05:30] [INFO] Starting clean experiment (4 rounds).
+[2026-09-27T23:48:39.981733+05:30] [ERROR] Clean experiment exited with code 1.
+[2026-09-27T23:51:09.450646+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:51:23.054920+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:51:23.054920+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:53:59.265725+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:53:59.265725+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:55:00.367211+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:55:40.793113+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T23:55:40.794631+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T23:55:52.141183+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-27T23:55:52.142252+05:30] [INFO] Starting clean experiment (10 rounds).
+[2026-09-27T23:55:52.142252+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20260927-235552-142252
+[2026-09-28T00:08:03.755384+05:30] [INFO] Saved clean snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:08:03.755384+05:30] [INFO] Clean experiment completed successfully.
+[2026-09-28T00:08:03.756898+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
+[2026-09-28T00:08:03.763148+05:30] [INFO] Starting poisoned experiment (10 rounds).
+[2026-09-28T00:08:03.764658+05:30] [INFO] Using isolated Flower runtime: dashboard-poisoned-20260928-000803-764658
+[2026-09-28T00:16:41.872245+05:30] [INFO] Saved poisoned snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:16:41.872245+05:30] [INFO] Poisoned experiment completed successfully.
+[2026-09-28T00:16:41.872245+05:30] [INFO] Comparison finished. Both clean and poisoned rows are available below.
+[2026-09-28T00:16:41.878067+05:30] [INFO] Cleared transient live metrics after completion; snapshots remain available.
+[2026-09-28T00:19:50.378485+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-09-28T00:19:50.378485+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-28T00:19:50.379000+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8011/federation-process.html
+[2026-09-28T00:19:52.071784+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-09-28T00:20:08.005804+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-09-28T00:20:08.005804+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-28T00:20:08.005804+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-28T00:20:25.294109+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-28T00:20:25.294974+05:30] [INFO] Starting clean experiment (10 rounds).
+[2026-09-28T00:20:25.295493+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20260928-002025-294974
+[2026-09-28T00:28:20.638510+05:30] [INFO] Saved clean snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:28:20.638510+05:30] [INFO] Clean experiment completed successfully.
+[2026-09-28T00:28:20.638510+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
+[2026-09-28T00:28:20.644023+05:30] [INFO] Starting poisoned experiment (10 rounds).
+[2026-09-28T00:28:20.645534+05:30] [INFO] Using isolated Flower runtime: dashboard-poisoned-20260928-002820-644023
+[2026-09-28T00:36:28.054223+05:30] [INFO] Saved poisoned snapshot with completed metrics; it will remain available during the next run.
+[2026-09-28T00:36:28.054768+05:30] [INFO] Poisoned experiment completed successfully.
+[2026-09-28T00:36:28.055279+05:30] [INFO] Comparison finished. Both clean and poisoned rows are available below.
+[2026-09-28T00:36:28.060564+05:30] [INFO] Cleared transient live metrics after completion; snapshots remain available.

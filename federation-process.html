@@ -261,11 +261,21 @@
       }
       drawCompare(clean, poison);
 
-      const cleanClients = (payload.clean || {}).clients || [];
+      const savedCleanClients = (payload.clean || {}).clients || [];
       const savedPoisonClients = (payload.poisoned || {}).clients || [];
-      const livePoisonClients = (live && live.clients) || [];
-      const useLivePoison = Boolean(runState && runState.running && runState.phase === "poisoned" && livePoisonClients.length);
-      const poisonClients = useLivePoison ? livePoisonClients : savedPoisonClients;
+      const liveClients = (live && live.clients) || [];
+      const phase = String((runState && runState.phase) || "").toLowerCase();
+
+      let cleanClients = savedCleanClients;
+      let poisonClients = savedPoisonClients;
+      if (runState && runState.running && liveClients.length) {
+        if (phase === "clean" || phase === "starting") {
+          cleanClients = liveClients;
+        } else if (phase === "poisoned") {
+          poisonClients = liveClients;
+        }
+      }
+
       const combined = cleanClients.map((r) => ({...r, experiment: "clean"}))
         .concat(poisonClients.map((r) => ({...r, experiment: "poisoned"})))
         .sort((a, b) => String(b.experiment).localeCompare(String(a.experiment)) || Number(b.round) - Number(a.round) || Number(a.client_id) - Number(b.client_id));

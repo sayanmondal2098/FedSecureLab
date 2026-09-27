@@ -1,0 +1,15 @@
+{
+  "run_id": "20260927-222240-458",
+  "started_at": "2026-09-27T22:22:40.459529+05:30",
+  "status": "running",
+  "payload": {
+    "num_server_rounds": 2,
+    "poison_mode": "label_flip",
+    "poison_client_ids": "1,2,3",
+    "poison_rate_default": 0,
+    "poison_rate_map": "1:0.4000,2:0.6000,3:0.4000",
+    "poison_label_flip_offset": 1,
+    "poison_noise_std": 0.15
+  },
+  "clean_exit_code": 0
+}

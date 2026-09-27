@@ -1,0 +1,31 @@
+{
+  "aggregation": "FedAvg",
+  "clients": 5,
+  "experiment": "Flower TensorFlow CIFAR-10 Baseline",
+  "package_versions": {
+    "flwr": "1.38.0",
+    "flwr-datasets": "0.6.1",
+    "ray": "2.55.1",
+    "tensorflow": "2.21.0"
+  },
+  "partitioning": "IID",
+  "run_config": {
+    "batch-size": 32,
+    "dirichlet-alpha": 0.5,
+    "fraction-evaluate": 1.0,
+    "fraction-train": 1.0,
+    "learning-rate": 0.001,
+    "local-epochs": 1,
+    "malicious-client-id": -1,
+    "num-server-rounds": 2,
+    "partition-mode": "iid",
+    "poison-client-ids": "",
+    "poison-label-flip-offset": 1,
+    "poison-mode": "none",
+    "poison-noise-std": 0.15,
+    "poison-rate-default": 0,
+    "poison-rate-map": "",
+    "seed": 42,
+    "verbose": 0
+  }
+}

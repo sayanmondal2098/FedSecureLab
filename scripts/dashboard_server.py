@@ -8,6 +8,7 @@ import os
 import subprocess
 import tempfile
 import threading
+import time
 from datetime import datetime, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -28,6 +29,8 @@ RUN_STATE: dict[str, object] = {
     "poisoned_exit_code": None,
     "logs": [],
 }
+API_LOG_THROTTLE_SECONDS = 5.0
+_LAST_API_LOG: dict[str, float] = {}
 
 
 def _set_state(**kwargs: object) -> None:
@@ -56,6 +59,27 @@ def _log_event(message: str, level: str = "info") -> None:
         # Logging must never break simulation control.
         pass
     print(f"[dashboard:{level}] {message}", flush=True)
+
+
+def _log_backend(message: str, level: str = "debug") -> None:
+    """Write backend diagnostics without adding noise to the browser run-state log."""
+    now_local = datetime.now(timezone.utc).astimezone()
+    try:
+        BACKGROUND_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with BACKGROUND_LOG_PATH.open("a", encoding="utf-8") as handle:
+            handle.write(f"[{now_local.isoformat()}] [{level.upper()}] {message}\n")
+    except OSError:
+        pass
+    print(f"[dashboard:{level}] {message}", flush=True)
+
+
+def _log_api_trace(key: str, message: str, force: bool = False) -> None:
+    """Throttle repeated API polling logs so one-second refreshes stay readable."""
+    now = time.monotonic()
+    last = _LAST_API_LOG.get(key, 0.0)
+    if force or (now - last) >= API_LOG_THROTTLE_SECONDS:
+        _LAST_API_LOG[key] = now
+        _log_backend(message)
 
 
 def _read_state() -> dict[str, object]:
@@ -121,13 +145,49 @@ def _build_run_config(env: dict[str, str], override: dict[str, str]) -> str:
     return " ".join(parts)
 
 
+def _resolve_flwr_home(tag: str, launch_id: str, base_env: dict[str, str]) -> Path:
+    """Pick a writable, isolated FLWR_HOME inside the project by default."""
+    configured_base = base_env.get("FLWR_HOME_BASE", "").strip()
+    default_base = PROJECT_ROOT / ".flwr-runs"
+    fallback_project_base = PROJECT_ROOT / ".runtime-flwr-runs"
+    fallback_temp_base = Path(tempfile.gettempdir()) / "FedSecureLab" / "flwr-runs"
+
+    candidates: list[Path] = []
+    if configured_base:
+        candidates.append(Path(configured_base))
+    candidates.extend([default_base, fallback_project_base, fallback_temp_base])
+
+    errors: list[str] = []
+    for base in candidates:
+        try:
+            base.mkdir(parents=True, exist_ok=True)
+            flwr_home = base / f"dashboard-{tag}-{launch_id}"
+            flwr_home.mkdir(parents=False, exist_ok=False)
+            if base != default_base:
+                _log_event(f"Using fallback Flower runtime base: {base}", "warning")
+            return flwr_home
+        except FileExistsError:
+            # Extremely unlikely for microsecond launch IDs, but retry candidate.
+            continue
+        except OSError as exc:
+            errors.append(f"{base}: {exc}")
+
+    joined = " | ".join(errors) if errors else "unknown error"
+    raise RuntimeError(f"Unable to create Flower runtime directory: {joined}")
+
+
 def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag: str, phase_name: str) -> int:
     reset_live_metrics()
     _set_state(phase=phase_name, message=f"Running {phase_name} experiment")
     _log_event(f"Starting {phase_name} experiment ({override.get('NUM_SERVER_ROUNDS', '?')} rounds).")
 
-    flwr_home = Path(os.environ.get("LOCALAPPDATA", tempfile.gettempdir())) / "FedSecureLab" / "flwr-runs" / f"dashboard-{tag}"
-    flwr_home.mkdir(parents=True, exist_ok=True)
+    # Never reuse a Flower home between launches. A reused local SuperLink
+    # keeps its SQLite/WAL files and can leave locks or stale runtime state
+    # after an interrupted dashboard run, causing the 15-second startup
+    # timeout. Each experiment gets an isolated local runtime instead.
+    launch_id = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    flwr_home = _resolve_flwr_home(tag, launch_id, base_env)
+    _log_event(f"Using isolated Flower runtime: {flwr_home.name}")
 
     runtime_env = os.environ.copy()
     runtime_env.update({
@@ -139,6 +199,9 @@ def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag:
         "RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO": base_env.get("RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO", "0"),
     })
     runtime_env["PATH"] = str(PROJECT_ROOT / ".venv" / "Scripts") + os.pathsep + runtime_env.get("PATH", "")
+    _log_backend(
+        f"Prepared runtime env for {phase_name}: FLWR_HOME={runtime_env['FLWR_HOME']} TMP={runtime_env['TMP']}"
+    )
 
     python = PROJECT_ROOT / ".venv" / "Scripts" / "python.exe"
     run_config = _build_run_config(base_env, override)
@@ -262,6 +325,11 @@ def read_metrics() -> dict[str, list[dict[str, object]]]:
             phase = json.loads(phase_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             pass
+    _log_api_trace(
+        "metrics",
+        "GET /api/metrics -> "
+        f"clients={len(clients)} global={len(global_rows)} statuses={len(statuses)} phase={phase.get('phase', 'n/a')}",
+    )
     return {"clients": clients, "global": global_rows, "statuses": statuses, "phase": phase}
 
 
@@ -287,10 +355,14 @@ def _read_tagged_snapshot(tag: str) -> dict[str, object]:
 
 
 def read_comparison() -> dict[str, object]:
-    return {
+    payload = {
         "clean": _read_tagged_snapshot("clean"),
         "poisoned": _read_tagged_snapshot("poisoned"),
     }
+    clean_count = len(payload["clean"].get("clients", []))
+    poison_count = len(payload["poisoned"].get("clients", []))
+    _log_api_trace("comparison", f"GET /api/comparison -> clean_clients={clean_count} poisoned_clients={poison_count}")
+    return payload
 
 
 def reset_live_metrics() -> None:
@@ -306,6 +378,7 @@ def reset_live_metrics() -> None:
     phase_path = RESULTS_DIR / "live_phase.json"
     if phase_path.exists():
         phase_path.unlink()
+    _log_backend("Reset transient live metrics (client fragments, status files, live CSVs, phase file).")
 
 
 class DashboardHandler(SimpleHTTPRequestHandler):
@@ -344,7 +417,14 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             self.wfile.write(payload)
             return
         if path == "/api/run-state":
-            payload = json.dumps(_read_state()).encode("utf-8")
+            state = _read_state()
+            _log_api_trace(
+                "run-state",
+                "GET /api/run-state -> "
+                f"running={state.get('running')} phase={state.get('phase')} "
+                f"clean_exit={state.get('clean_exit_code')} poisoned_exit={state.get('poisoned_exit_code')}",
+            )
+            payload = json.dumps(state).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Cache-Control", "no-store")
@@ -368,7 +448,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             self.send_response(400)
             self.end_headers()
             return
+        _log_backend(f"POST /api/start-comparison payload={payload}")
         started = launch_comparison(payload)
+        _log_backend(f"POST /api/start-comparison result started={started}")
         response = json.dumps({"started": started, "state": _read_state()}).encode("utf-8")
         self.send_response(200 if started else 409)
         self.send_header("Content-Type", "application/json; charset=utf-8")
