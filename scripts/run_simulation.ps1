@@ -19,19 +19,20 @@ if (-not (Test-Path -LiteralPath $python)) {
 }
 
 $env:Path = "$projectRoot\.venv\Scripts;$env:Path"
-$env:PYTHONUTF8 = '1'
+$env:PYTHONUTF8 = if ($env:PYTHON_UTF8) { $env:PYTHON_UTF8 } else { '1' }
 $env:FEDSECURELAB_PROJECT_ROOT = $projectRoot
 $runStamp = Get-Date -Format 'yyyyMMdd-HHmmss'
-$flwrHomeBase = Join-Path $env:LOCALAPPDATA 'FedSecureLab\flwr-runs'
+$flwrHomeBase = if ($env:FLWR_HOME_BASE) { $env:FLWR_HOME_BASE } else { Join-Path $env:LOCALAPPDATA 'FedSecureLab\flwr-runs' }
 $env:FLWR_HOME = Join-Path $flwrHomeBase $runStamp
-$env:TEMP = Join-Path $projectRoot '.runtime-tmp'
+$runtimeTmpDir = if ($env:RUNTIME_TMP_DIR) { $env:RUNTIME_TMP_DIR } else { '.runtime-tmp' }
+$env:TEMP = if ([System.IO.Path]::IsPathRooted($runtimeTmpDir)) { $runtimeTmpDir } else { Join-Path $projectRoot $runtimeTmpDir }
 $env:TMP = $env:TEMP
-$env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO = '0'
+$env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO = if ($env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO) { $env:RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO } else { '0' }
 New-Item -ItemType Directory -Force -Path $env:FLWR_HOME, $env:TEMP | Out-Null
 
 # Start the live local dashboard before Flower. It reads the metric fragments
 # written by the clients and global evaluator, so the browser updates per round.
-$dashboardPort = 8000
+$dashboardPort = if ($env:DASHBOARD_PORT) { [int]$env:DASHBOARD_PORT } else { 8000 }
 $dashboardUrl = "http://127.0.0.1:$dashboardPort/federation-process.html"
 $dashboard = Start-Process -FilePath $python `
   -ArgumentList "scripts\dashboard_server.py --port $dashboardPort --reset" `

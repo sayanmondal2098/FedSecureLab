@@ -1,1 +1,1 @@
-{"client_id": 4, "num_samples": 8000, "round": 4, "train_accuracy": 0.5095000267028809, "train_loss": 1.3626587390899658, "val_accuracy": 0.4925000071525574, "val_loss": 1.374611735343933}
+{"client_id": 4, "num_samples": 8000, "round": 4, "train_accuracy": 0.512499988079071, "train_loss": 1.3642336130142212, "val_accuracy": 0.4945000112056732, "val_loss": 1.3730262517929077}
