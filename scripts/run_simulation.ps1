@@ -1,5 +1,7 @@
 param([switch]$DashboardOnly)
 
+$dashboardOnlyEffective = if ($PSBoundParameters.ContainsKey('DashboardOnly')) { [bool]$DashboardOnly } else { $true }
+
 # Loads .env and launches Flower with the five-client local simulation profile.
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $envPath = Join-Path $projectRoot '.env'
@@ -42,7 +44,7 @@ $dashboard = Start-Process -FilePath $python `
 Start-Process $dashboardUrl
 Write-Host "Live training dashboard: $dashboardUrl"
 
-if ($DashboardOnly) {
+if ($dashboardOnlyEffective) {
   Write-Host "Dashboard-only mode enabled. Configure poisoning in the dashboard and click 'Run Clean Then Poisoned'."
   Write-Host "Press Ctrl+C in this terminal when finished."
   Push-Location $projectRoot
@@ -115,7 +117,7 @@ $runExitCode = 1
 
 try {
   Write-Host "Running immediate experiment from .env values."
-  Write-Host "Tip: use '-DashboardOnly' to run clean+poisoned from dashboard controls instead."
+  Write-Host "Tip: dashboard-only is now default. Use '-DashboardOnly:$false' for immediate .env execution."
   & $python -m flwr.cli.app run $projectRoot --stream `
     --federation-config $federationConfig `
     --run-config $runConfig
