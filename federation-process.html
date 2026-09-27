@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flower Live Training</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #09111f; color: #e7efff; }
+    main { width: min(1240px, 100%); margin: auto; padding: 24px 18px 40px; }
+    h1 { margin: 0; }
+    h2 { margin: 0 0 10px; font-size: 1.12rem; }
+    .sub, .muted { color: #aab9d3; }
+    .status {
+      display: inline-block;
+      margin: 12px 0;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #104b36;
+      color: #9af0bd;
+    }
+    .panel, .step, .card, .stat {
+      border: 1px solid #2a3d60;
+      border-radius: 14px;
+      background: #111d31;
+    }
+    .panel { padding: 14px; overflow: auto; }
+    .section { margin-top: 18px; }
+    .grid-2, .grid-3, .grid-4, .cards {
+      display: grid;
+      gap: 12px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .cards { grid-template-columns: repeat(5, 1fr); }
+    .step { padding: 12px; color: #91a3c3; }
+    .step b { display: block; color: #dce8ff; }
+    .step.active { border-color: #70a8ff; background: #1d426f; color: #dceeff; box-shadow: 0 0 0 2px #70a8ff44; }
+    .card { min-height: 82px; padding: 12px; text-align: center; }
+    .card.training { border-color: #f6c760; background: #4a3912; }
+    .card.completed { border-color: #58d68d; background: #123d2d; }
+    .client-state { margin-top: 8px; font-weight: 700; }
+    .value { font-size: 1.58rem; font-weight: 700; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 9px; border-bottom: 1px solid #283b5a; text-align: left; }
+    th { color: #aab9d3; font-size: .82rem; }
+    input, select, button {
+      width: 100%;
+      background: #0d1628;
+      color: #e7efff;
+      border: 1px solid #35507a;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: .95rem;
+    }
+    button { cursor: pointer; background: #1f4f8f; border-color: #5d95df; font-weight: 700; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+    .row { display: flex; gap: 8px; align-items: center; }
+    .row label { min-width: 90px; font-size: .9rem; color: #c7d8f5; }
+    .node-rate { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .node-rate .panel { padding: 8px; }
+    .tag { padding: 2px 8px; border-radius: 999px; border: 1px solid #3d5276; font-size: .82rem; }
+    .tag.clean { color: #9fd3ff; }
+    .tag.poison { color: #ffb480; }
+    .delta.good { color: #8ce4ae; }
+    .delta.bad { color: #ff9898; }
+    svg { display: block; width: 100%; min-width: 500px; height: 220px; }
+    .axis { stroke: #496183; }
+    .line-live { fill: none; stroke: #8fd2ff; stroke-width: 3; }
+    .line-clean { fill: none; stroke: #7cc2ff; stroke-width: 3; }
+    .line-poison { fill: none; stroke: #ff9f64; stroke-width: 3; }
+    @media (max-width: 940px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .node-rate { grid-template-columns: repeat(2, 1fr); }
+      svg { min-width: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Flower Federated Learning</h1>
+    <p class="sub">Dashboard-controlled clean vs poisoned experiment runner.</p>
+    <div id="status" class="status">Waiting for simulation to begin...</div>
+
+    <section class="section panel">
+      <h2>Experiment Controls</h2>
+      <div class="grid-4">
+        <div class="row"><label>Rounds</label><input id="roundsInput" type="number" min="1" value="10"></div>
+        <div class="row"><label>Poison type</label><select id="poisonMode"><option value="label_flip">label_flip</option><option value="gaussian_noise">gaussian_noise</option></select></div>
+        <div class="row"><label>Label offset</label><input id="labelOffset" type="number" min="1" max="9" value="1"></div>
+        <div class="row"><label>Noise std</label><input id="noiseStd" type="number" min="0" step="0.01" value="0.15"></div>
+      </div>
+      <div class="section">
+        <div class="muted">Poison percentage per node (0-100). Set 0 to keep a node clean.</div>
+        <div class="node-rate section">
+          <div class="panel"><label>Client 0 %</label><input id="rate0" type="number" min="0" max="100" value="0"></div>
+          <div class="panel"><label>Client 1 %</label><input id="rate1" type="number" min="0" max="100" value="40"></div>
+          <div class="panel"><label>Client 2 %</label><input id="rate2" type="number" min="0" max="100" value="0"></div>
+          <div class="panel"><label>Client 3 %</label><input id="rate3" type="number" min="0" max="100" value="40"></div>
+          <div class="panel"><label>Client 4 %</label><input id="rate4" type="number" min="0" max="100" value="0"></div>
+        </div>
+      </div>
+      <div class="section"><button id="startBtn" onclick="startComparison()">Run Clean Then Poisoned</button></div>
+      <div id="runState" class="muted section">Runner: idle</div>
+    </section>
+
+    <section class="section grid-4">
+      <div id="broadcast" class="step"><b>1. Broadcast</b>Server sends global weights</div>
+      <div id="train" class="step"><b>2. Local training</b>Clients train independently</div>
+      <div id="aggregate" class="step"><b>3. FedAvg</b>Server aggregates updates</div>
+      <div id="evaluate" class="step"><b>4. Evaluate</b>Global test metrics</div>
+    </section>
+
+    <section class="section"><h2 id="roundTitle">Current round: waiting for Flower</h2><div id="clients" class="cards"></div></section>
+
+    <section class="section grid-3">
+      <article class="stat panel"><div class="muted">Completed rounds</div><div id="rounds" class="value">0</div></article>
+      <article class="stat panel"><div class="muted">Latest global accuracy</div><div id="accuracy" class="value">-</div></article>
+      <article class="stat panel"><div class="muted">Latest global loss</div><div id="loss" class="value">-</div></article>
+    </section>
+
+    <section class="section panel"><h2>Live Global Accuracy</h2><svg id="liveChart" viewBox="0 0 700 220"></svg><div id="liveLegend" class="muted">The chart appears after the first global evaluation.</div></section>
+
+    <section class="section panel">
+      <h2>Client Training Activity</h2>
+      <table>
+        <thead><tr><th>Round</th><th>Client</th><th>Train accuracy</th><th>Validation accuracy</th><th>Train loss</th><th>Poison</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="6" class="muted">Waiting for client metrics...</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Clean vs Poisoned Comparison</h2>
+      <div class="grid-2">
+        <article class="panel"><div class="muted">Final global accuracy <span class="tag clean">clean</span></div><div id="cleanAcc" class="value">-</div><div class="muted">Final global loss: <span id="cleanLoss">-</span></div></article>
+        <article class="panel"><div class="muted">Final global accuracy <span class="tag poison">poisoned</span></div><div id="poisonAcc" class="value">-</div><div class="muted">Final global loss: <span id="poisonLoss">-</span></div></article>
+      </div>
+      <div class="panel section">
+        <div class="muted">Accuracy delta (poisoned - clean): <span id="accDelta" class="delta">-</span></div>
+        <div class="muted">Loss delta (poisoned - clean): <span id="lossDelta" class="delta">-</span></div>
+        <svg id="compareChart" viewBox="0 0 700 220"></svg>
+        <div id="compareLegend" class="muted">Use the control panel to run clean then poisoned experiments.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const stages = ["broadcast", "train", "aggregate", "evaluate"];
+    const pct = (v) => (Number(v) * 100).toFixed(2) + "%";
+    const num = (v) => Number(v).toFixed(4);
+
+    function setStage(stage) { stages.forEach((s) => document.querySelector("#" + s).classList.toggle("active", s === stage)); }
+
+    function drawLine(svgId, rows, key, cls, legendId) {
+      const svg = document.querySelector(svgId);
+      if (!rows.length) {
+        svg.innerHTML = "";
+        if (legendId) document.querySelector(legendId).textContent = "Waiting for data...";
+        return;
+      }
+      const values = rows.map((r) => Number(r[key]));
+      const lo = Math.min(...values), hi = Math.max(...values);
+      const x = (i) => 45 + (i * 620) / Math.max(values.length - 1, 1);
+      const y = (v) => 190 - ((v - lo) / Math.max(hi - lo, 0.01)) * 150;
+      svg.innerHTML = '<line class="axis" x1="45" y1="190" x2="680" y2="190"/><line class="axis" x1="45" y1="20" x2="45" y2="190"/><path class="' + cls + '" d="' + values.map((v, i) => (i ? "L" : "M") + " " + x(i) + " " + y(v)).join(" ") + '"/>';
+      if (legendId) document.querySelector(legendId).textContent = "Range: " + pct(lo) + " to " + pct(hi);
+    }
+
+    function drawCompare(cleanRows, poisonRows) {
+      const svg = document.querySelector("#compareChart");
+      if (!cleanRows.length || !poisonRows.length) {
+        svg.innerHTML = "";
+        document.querySelector("#compareLegend").textContent = "Use the control panel to run clean then poisoned experiments.";
+        return;
+      }
+      const clean = cleanRows.map((r) => Number(r.global_accuracy));
+      const poison = poisonRows.map((r) => Number(r.global_accuracy));
+      const all = clean.concat(poison);
+      const lo = Math.min(...all), hi = Math.max(...all);
+      const x = (i, len) => 45 + (i * 620) / Math.max(len - 1, 1);
+      const y = (v) => 190 - ((v - lo) / Math.max(hi - lo, 0.01)) * 150;
+      const cleanPath = clean.map((v, i) => (i ? "L" : "M") + " " + x(i, clean.length) + " " + y(v)).join(" ");
+      const poisonPath = poison.map((v, i) => (i ? "L" : "M") + " " + x(i, poison.length) + " " + y(v)).join(" ");
+      svg.innerHTML = '<line class="axis" x1="45" y1="190" x2="680" y2="190"/><line class="axis" x1="45" y1="20" x2="45" y2="190"/><path class="line-clean" d="' + cleanPath + '"/><path class="line-poison" d="' + poisonPath + '"/>';
+      document.querySelector("#compareLegend").textContent = "Blue: clean | Orange: poisoned";
+    }
+
+    function renderLive(d) {
+      const clients = d.clients || [];
+      const globalRows = d.global || [];
+      const statuses = d.statuses || [];
+      const phase = d.phase || {};
+      const last = globalRows.at(-1);
+      const round = Math.max(0, ...clients.map((x) => +x.round), ...statuses.map((x) => +x.round), ...globalRows.map((x) => +x.round), +(phase.round || 0));
+      const stage = phase.phase || (last && +last.round === round ? "evaluate" : statuses.some((x) => +x.round === round && x.state === "training") ? "train" : clients.filter((x) => +x.round === round).length === 5 ? "aggregate" : "broadcast");
+      setStage(stage);
+      document.querySelector("#roundTitle").textContent = round ? "Current round: " + round + " - " + stage : "Current round: waiting for Flower";
+
+      const map = new Map(statuses.filter((x) => +x.round === round).map((x) => [+x.client_id, x.state]));
+      document.querySelector("#clients").innerHTML = [0,1,2,3,4].map((id) => {
+        const s = map.get(id) || "waiting";
+        const txt = s === "completed" ? "Completed" : s === "training" ? "Training" : "Waiting";
+        return '<article class="card ' + s + '"><b>Client ' + id + '</b><div class="client-state">' + txt + '</div></article>';
+      }).join("");
+
+      document.querySelector("#status").textContent = round ? "Live: round " + round + " - " + clients.length + " client updates received" : "Waiting for simulation to begin...";
+      document.querySelector("#rounds").textContent = globalRows.length;
+      document.querySelector("#accuracy").textContent = last ? pct(last.global_accuracy) : "-";
+      document.querySelector("#loss").textContent = last ? num(last.global_loss) : "-";
+
+      document.querySelector("#rows").innerHTML = clients.length ? clients.slice().reverse().map((r) => {
+        const poisoned = String(r.poisoned).toLowerCase() === "true";
+        const p = poisoned ? (r.poison_mode || "yes") : "no";
+        return "<tr><td>" + r.round + "</td><td>" + r.client_id + "</td><td>" + pct(r.train_accuracy) + "</td><td>" + pct(r.val_accuracy) + "</td><td>" + num(r.train_loss) + "</td><td>" + p + "</td></tr>";
+      }).join("") : '<tr><td colspan="6" class="muted">Waiting for client metrics...</td></tr>';
+
+      drawLine("#liveChart", globalRows, "global_accuracy", "line-live", "#liveLegend");
+    }
+
+    function renderComparison(payload) {
+      const clean = (payload.clean || {}).global || [];
+      const poison = (payload.poisoned || {}).global || [];
+      const cleanLast = clean.at(-1);
+      const poisonLast = poison.at(-1);
+      document.querySelector("#cleanAcc").textContent = cleanLast ? pct(cleanLast.global_accuracy) : "-";
+      document.querySelector("#cleanLoss").textContent = cleanLast ? num(cleanLast.global_loss) : "-";
+      document.querySelector("#poisonAcc").textContent = poisonLast ? pct(poisonLast.global_accuracy) : "-";
+      document.querySelector("#poisonLoss").textContent = poisonLast ? num(poisonLast.global_loss) : "-";
+
+      const accDeltaEl = document.querySelector("#accDelta");
+      const lossDeltaEl = document.querySelector("#lossDelta");
+      if (cleanLast && poisonLast) {
+        const accDelta = Number(poisonLast.global_accuracy) - Number(cleanLast.global_accuracy);
+        const lossDelta = Number(poisonLast.global_loss) - Number(cleanLast.global_loss);
+        accDeltaEl.textContent = (accDelta >= 0 ? "+" : "") + (accDelta * 100).toFixed(2) + "%";
+        lossDeltaEl.textContent = (lossDelta >= 0 ? "+" : "") + lossDelta.toFixed(4);
+        accDeltaEl.className = "delta " + (accDelta >= 0 ? "good" : "bad");
+        lossDeltaEl.className = "delta " + (lossDelta <= 0 ? "good" : "bad");
+      } else {
+        accDeltaEl.textContent = "-";
+        lossDeltaEl.textContent = "-";
+        accDeltaEl.className = "delta";
+        lossDeltaEl.className = "delta";
+      }
+      drawCompare(clean, poison);
+    }
+
+    function renderState(state) {
+      const running = Boolean(state.running);
+      document.querySelector("#startBtn").disabled = running;
+      document.querySelector("#runState").textContent = "Runner: " + (state.phase || "idle") + " | " + (state.message || "");
+    }
+
+    function buildPayload() {
+      const rounds = Number(document.querySelector("#roundsInput").value || 10);
+      const mode = document.querySelector("#poisonMode").value;
+      const labelOffset = Number(document.querySelector("#labelOffset").value || 1);
+      const noiseStd = Number(document.querySelector("#noiseStd").value || 0.15);
+      const rates = [];
+      const ids = [];
+      for (let i = 0; i < 5; i += 1) {
+        const val = Number(document.querySelector("#rate" + i).value || 0);
+        if (val > 0) {
+          ids.push(i);
+          rates.push(i + ":" + (val / 100).toFixed(4));
+        }
+      }
+      return {
+        num_server_rounds: rounds,
+        poison_mode: mode,
+        poison_client_ids: ids.join(","),
+        poison_rate_default: 0,
+        poison_rate_map: rates.join(","),
+        poison_label_flip_offset: labelOffset,
+        poison_noise_std: noiseStd,
+      };
+    }
+
+    async function startComparison() {
+      const response = await fetch("/api/start-comparison", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(buildPayload()),
+      });
+      const data = await response.json();
+      renderState(data.state || {});
+      if (!response.ok) {
+        alert("Runner is already active or failed to start.");
+      }
+    }
+
+    async function refresh() {
+      try {
+        const [live, comparison, runState] = await Promise.all([
+          fetch("/api/metrics", { cache: "no-store" }).then((r) => r.json()),
+          fetch("/api/comparison", { cache: "no-store" }).then((r) => r.json()),
+          fetch("/api/run-state", { cache: "no-store" }).then((r) => r.json()),
+        ]);
+        renderLive(live);
+        renderComparison(comparison);
+        renderState(runState);
+      } catch {
+        document.querySelector("#status").textContent = "Dashboard connection interrupted; retrying...";
+      }
+    }
+
+    refresh();
+    setInterval(refresh, 1000);
+  </script>
+</body>
+</html>

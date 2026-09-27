@@ -1,3 +1,5 @@
+param([switch]$DashboardOnly)
+
 # Loads .env and launches Flower with the five-client local simulation profile.
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $envPath = Join-Path $projectRoot '.env'
@@ -39,6 +41,18 @@ $dashboard = Start-Process -FilePath $python `
   -WorkingDirectory $projectRoot -WindowStyle Hidden -PassThru
 Start-Process $dashboardUrl
 Write-Host "Live training dashboard: $dashboardUrl"
+
+if ($DashboardOnly) {
+  Write-Host "Dashboard-only mode enabled. Configure poisoning in the dashboard and click 'Run Clean Then Poisoned'."
+  Write-Host "Press Ctrl+C in this terminal when finished."
+  Push-Location $projectRoot
+  try {
+    & $python scripts/dashboard_server.py --port $dashboardPort
+  } finally {
+    Pop-Location
+  }
+  exit 0
+}
 
 $federationConfig = "num-supernodes=$env:FLWR_NUM_SUPERNODES client-resources-num-cpus=$env:FLWR_CLIENT_CPUS client-resources-num-gpus=$env:FLWR_CLIENT_GPUS"
 # Keep string-valued research hooks in pyproject.toml for now. Passing them
@@ -100,6 +114,8 @@ function Save-ComparisonSnapshot {
 $runExitCode = 1
 
 try {
+  Write-Host "Running immediate experiment from .env values."
+  Write-Host "Tip: use '-DashboardOnly' to run clean+poisoned from dashboard controls instead."
   & $python -m flwr.cli.app run $projectRoot --stream `
     --federation-config $federationConfig `
     --run-config $runConfig

@@ -82,15 +82,15 @@ def _build_run_config(env: dict[str, str], override: dict[str, str]) -> str:
         f"batch-size={merged.get('BATCH_SIZE', '32')}",
         f"learning-rate={merged.get('LEARNING_RATE', '0.001')}",
         f"seed={merged.get('SEED', '42')}",
-        f"poison-mode=\\\"{merged.get('POISON_MODE', 'none')}\\\"",
+        f"poison-mode=\"{merged.get('POISON_MODE', 'none')}\"",
         f"poison-label-flip-offset={merged.get('POISON_LABEL_FLIP_OFFSET', '1')}",
         f"poison-noise-std={merged.get('POISON_NOISE_STD', '0.15')}",
         f"poison-rate-default={merged.get('POISON_RATE_DEFAULT', '0.30')}",
-        f"poison-rate-map=\\\"{merged.get('POISON_RATE_MAP', '')}\\\"",
+        f"poison-rate-map=\"{merged.get('POISON_RATE_MAP', '')}\"",
     ]
     poison_ids = merged.get("POISON_CLIENT_IDS", "").strip()
     if poison_ids:
-        parts.append(f"poison-client-ids=\\\"{poison_ids}\\\"")
+        parts.append(f"poison-client-ids=\"{poison_ids}\"")
     return " ".join(parts)
 
 
