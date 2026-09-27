@@ -38,23 +38,27 @@ New-Item -ItemType Directory -Force -Path $env:FLWR_HOME, $env:TEMP | Out-Null
 # written by the clients and global evaluator, so the browser updates per round.
 $dashboardPort = if ($env:DASHBOARD_PORT) { [int]$env:DASHBOARD_PORT } else { 8000 }
 $dashboardUrl = "http://127.0.0.1:$dashboardPort/federation-process.html"
-$dashboard = Start-Process -FilePath $python `
-  -ArgumentList "scripts\dashboard_server.py --port $dashboardPort --reset" `
-  -WorkingDirectory $projectRoot -WindowStyle Hidden -PassThru
-Start-Process $dashboardUrl
-Write-Host "Live training dashboard: $dashboardUrl"
+$dashboard = $null
 
 if ($dashboardOnlyEffective) {
+  Start-Process $dashboardUrl
+  Write-Host "Live training dashboard: $dashboardUrl"
   Write-Host "Dashboard-only mode enabled. Configure poisoning in the dashboard and click 'Run Clean Then Poisoned'."
-  Write-Host "Press Ctrl+C in this terminal when finished."
+  Write-Host "Backend logs are shown in this terminal. Press Ctrl+C when finished."
   Push-Location $projectRoot
   try {
-    & $python scripts/dashboard_server.py --port $dashboardPort
+    & $python scripts/dashboard_server.py --port $dashboardPort --reset
   } finally {
     Pop-Location
   }
   exit 0
 }
+
+$dashboard = Start-Process -FilePath $python `
+  -ArgumentList "scripts\dashboard_server.py --port $dashboardPort --reset" `
+  -WorkingDirectory $projectRoot -WindowStyle Hidden -PassThru
+Start-Process $dashboardUrl
+Write-Host "Live training dashboard: $dashboardUrl"
 
 $federationConfig = "num-supernodes=$env:FLWR_NUM_SUPERNODES client-resources-num-cpus=$env:FLWR_CLIENT_CPUS client-resources-num-gpus=$env:FLWR_CLIENT_GPUS"
 # Keep string-valued research hooks in pyproject.toml for now. Passing them
@@ -123,7 +127,7 @@ try {
     --run-config $runConfig
   $runExitCode = $LASTEXITCODE
 } finally {
-  if (-not $dashboard.HasExited) {
+  if ($dashboard -and -not $dashboard.HasExited) {
     Stop-Process -Id $dashboard.Id -Force
   }
   if ($runExitCode -eq 0) {

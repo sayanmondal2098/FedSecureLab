@@ -1,0 +1,10 @@
+[2026-09-27T18:57:31.457449+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T18:57:31.458989+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T19:00:14.867944+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-09-27T19:00:14.867944+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-09-27T19:00:38.841565+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-09-27T19:00:38.843082+05:30] [INFO] Starting clean experiment (4 rounds).
+[2026-09-27T19:13:01.384541+05:30] [INFO] Saved clean snapshot with completed metrics; it will remain available during the next run.
+[2026-09-27T19:13:01.386050+05:30] [INFO] Clean experiment completed successfully.
+[2026-09-27T19:13:01.386050+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
+[2026-09-27T19:13:01.389070+05:30] [INFO] Starting poisoned experiment (4 rounds).

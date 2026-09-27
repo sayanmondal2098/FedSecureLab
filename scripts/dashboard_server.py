@@ -17,6 +17,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = PROJECT_ROOT / "results"
 CLIENT_METRICS_DIR = RESULTS_DIR / "client_round_metrics"
 COMPARISON_DIR = RESULTS_DIR / "comparison"
+BACKGROUND_LOG_PATH = RESULTS_DIR / "dashboard_backend.log"
 
 STATE_LOCK = threading.Lock()
 RUN_STATE: dict[str, object] = {
@@ -36,8 +37,9 @@ def _set_state(**kwargs: object) -> None:
 
 def _log_event(message: str, level: str = "info") -> None:
     """Keep a small, browser-readable timeline of the comparison runner."""
+    now_local = datetime.now(timezone.utc).astimezone()
     event = {
-        "time": datetime.now(timezone.utc).astimezone().strftime("%H:%M:%S"),
+        "time": now_local.strftime("%H:%M:%S"),
         "level": level,
         "message": message,
     }
@@ -45,6 +47,14 @@ def _log_event(message: str, level: str = "info") -> None:
         logs = list(RUN_STATE.get("logs", []))
         logs.append(event)
         RUN_STATE["logs"] = logs[-80:]
+    # Persist backend events without flooding terminal output with request logs.
+    try:
+        BACKGROUND_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with BACKGROUND_LOG_PATH.open("a", encoding="utf-8") as handle:
+            handle.write(f"[{now_local.isoformat()}] [{level.upper()}] {message}\n")
+    except OSError:
+        # Logging must never break simulation control.
+        pass
     print(f"[dashboard:{level}] {message}", flush=True)
 
 
@@ -196,13 +206,20 @@ def run_comparison(payload: dict[str, object]) -> None:
         _set_state(poisoned_exit_code=poison_code)
         if poison_code != 0:
             _set_state(running=False, phase="failed", message=f"Poisoned run failed with exit code {poison_code}")
+            # Avoid stale live rows showing on refresh when a run has failed.
+            reset_live_metrics()
             return
 
         _set_state(running=False, phase="done", message="Completed clean and poisoned experiments")
         _log_event("Comparison finished. Both clean and poisoned rows are available below.")
+        # Keep saved snapshots but clear transient live files so a page reload
+        # does not look like training is still active.
+        reset_live_metrics()
+        _log_event("Cleared transient live metrics after completion; snapshots remain available.")
     except Exception as exc:  # noqa: BLE001
         _set_state(running=False, phase="failed", message=f"Dashboard run failed: {exc}")
         _log_event(f"Dashboard run failed: {exc}", "error")
+        reset_live_metrics()
 
 
 def launch_comparison(payload: dict[str, object]) -> bool:
@@ -370,6 +387,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.reset:
         reset_live_metrics()
+        _log_event("Cleared transient live metrics at startup (--reset).")
+    _log_event(f"Starting dashboard server on http://127.0.0.1:{args.port}/federation-process.html")
     server = ThreadingHTTPServer(("127.0.0.1", args.port), DashboardHandler)
     print(f"Live dashboard available at http://127.0.0.1:{args.port}/federation-process.html", flush=True)
     server.serve_forever()
