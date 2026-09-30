@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import socket
 import subprocess
 import tempfile
 import threading
@@ -181,6 +182,25 @@ def _resolve_flwr_home(tag: str, launch_id: str, base_env: dict[str, str]) -> Pa
     raise RuntimeError(f"Unable to create Flower runtime directory: {joined}")
 
 
+def _reserve_local_superlink_ports() -> tuple[str, str]:
+    """Choose ports for one managed local SuperLink launch.
+
+    Flower's ``:local:`` connection otherwise always uses 39091.  That is a
+    machine-wide endpoint, so a stale SuperLink (or a second dashboard) can
+    prevent an otherwise isolated experiment from becoming ready.
+    """
+    def _free_port() -> str:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.bind(("127.0.0.1", 0))
+            return str(sock.getsockname()[1])
+
+    http_port = _free_port()
+    control_port = _free_port()
+    while control_port == http_port:
+        control_port = _free_port()
+    return http_port, control_port
+
+
 def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag: str, phase_name: str) -> int:
     reset_live_metrics()
     _set_state(phase=phase_name, message=f"Running {phase_name} experiment")
@@ -192,6 +212,7 @@ def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag:
     # timeout. Each experiment gets an isolated local runtime instead.
     launch_id = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     flwr_home = _resolve_flwr_home(tag, launch_id, base_env)
+    superlink_http_port, superlink_control_port = _reserve_local_superlink_ports()
     _log_event(f"Using isolated Flower runtime: {flwr_home.name}")
 
     runtime_env = os.environ.copy()
@@ -202,10 +223,14 @@ def _run_one_experiment(base_env: dict[str, str], override: dict[str, str], tag:
         "TEMP": str(PROJECT_ROOT / base_env.get("RUNTIME_TMP_DIR", ".runtime-tmp")),
         "TMP": str(PROJECT_ROOT / base_env.get("RUNTIME_TMP_DIR", ".runtime-tmp")),
         "RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO": base_env.get("RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO", "0"),
+        "FLWR_LOCAL_SUPERLINK_HTTP_API_PORT": superlink_http_port,
+        "FLWR_LOCAL_CONTROL_API_PORT": superlink_control_port,
     })
     runtime_env["PATH"] = str(PROJECT_ROOT / ".venv" / "Scripts") + os.pathsep + runtime_env.get("PATH", "")
     _log_backend(
-        f"Prepared runtime env for {phase_name}: FLWR_HOME={runtime_env['FLWR_HOME']} TMP={runtime_env['TMP']}"
+        f"Prepared runtime env for {phase_name}: FLWR_HOME={runtime_env['FLWR_HOME']} "
+        f"TMP={runtime_env['TMP']} SuperLink HTTP={superlink_http_port} "
+        f"control={superlink_control_port}"
     )
 
     python = PROJECT_ROOT / ".venv" / "Scripts" / "python.exe"
