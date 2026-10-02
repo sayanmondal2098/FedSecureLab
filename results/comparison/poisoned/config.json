@@ -17,14 +17,14 @@
     "learning-rate": 0.001,
     "local-epochs": 1,
     "malicious-client-id": -1,
-    "num-server-rounds": 10,
+    "num-server-rounds": 5,
     "partition-mode": "iid",
-    "poison-client-ids": "1,2,3",
+    "poison-client-ids": "1",
     "poison-label-flip-offset": 1,
     "poison-mode": "gaussian_noise",
     "poison-noise-std": 0.15,
     "poison-rate-default": 0,
-    "poison-rate-map": "1:0.4000,2:0.6000,3:0.4000",
+    "poison-rate-map": "1:1.0000",
     "seed": 42,
     "verbose": 0
   }

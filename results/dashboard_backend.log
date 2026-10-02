@@ -1345,3 +1345,1239 @@ oisoned_exit=0
 [2026-09-30T07:17:08.253584+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
 [2026-09-30T07:17:08.253584+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
 [2026-09-30T07:17:08.255139+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:18:08.255045+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:18:08.256617+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:18:08.258128+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:19:08.264290+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:19:08.265802+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:19:08.267319+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:20:08.269336+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:20:08.272366+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:20:08.274906+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:21:08.260183+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:21:08.263311+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:21:08.263311+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:22:08.256762+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:22:08.258275+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:22:08.261301+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:23:08.255678+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:23:08.255678+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:23:08.257195+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:24:08.259107+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:24:08.259107+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:24:08.262141+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:25:08.287285+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:25:08.321307+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:25:08.324330+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:26:08.268114+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:26:08.268114+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:26:08.269630+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:27:08.314885+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:27:08.365900+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:27:08.442197+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:28:08.265084+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:28:08.268114+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:28:08.268114+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:29:08.264130+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:29:08.267158+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:29:08.267158+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:30:08.259998+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:30:08.263030+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:30:08.264541+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:31:08.266021+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:31:08.270125+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:31:08.270125+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:32:08.261866+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:32:08.267958+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:32:08.269472+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:33:08.265281+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:33:08.265281+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:33:08.268309+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:34:08.259311+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:34:08.262332+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:34:08.262332+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:35:08.268627+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:35:08.270150+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:35:08.271669+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-09-30T07:36:08.253124+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-09-30T07:36:08.256144+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-09-30T07:36:08.259169+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T10:59:37.332682+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T10:59:37.446086+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-10-02T10:59:37.446086+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-10-02T10:59:39.271993+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T10:59:39.276068+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T10:59:39.905843+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T10:59:44.360537+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T10:59:44.447546+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T10:59:45.279988+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T10:59:49.371795+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T10:59:50.283304+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T10:59:50.284818+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T10:59:54.425045+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T10:59:55.271493+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T10:59:55.275038+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:00.306696+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:00.315284+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:00.320224+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:06.273907+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:06.275417+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:06.275417+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:12.296536+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:12.347367+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:12.461133+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:18.246709+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:18.246709+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:18.248220+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:24.247046+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:24.248054+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:24.249585+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:30.244129+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:30.245645+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:30.247155+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:36.148818+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:36.148818+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:36.150895+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:41.326966+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:41.377562+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:41.452477+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:47.252308+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:47.253820+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:47.255578+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:53.247282+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:53.248791+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:53.250303+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:00:59.253390+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:00:59.253390+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:00:59.254901+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:05.240758+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:05.240758+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:05.243277+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:11.244195+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:11.244195+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:11.245706+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:17.244085+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:17.245596+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:17.247107+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:23.246492+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:23.246492+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:23.249514+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:29.245397+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:29.246909+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:29.248420+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:35.245298+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:35.245298+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:35.248329+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:01:41.262368+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:01:41.270430+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:01:41.270978+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:02:41.263412+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:02:41.267473+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:02:41.271104+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:03:41.260926+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:03:41.260926+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:03:41.262440+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:04:39.688525+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:04:39.697110+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:04:39.710595+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:04:45.280352+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:04:45.280862+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:04:45.282374+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:04:46.982077+05:30] [DEBUG] POST /api/start-comparison payload={'num_server_rounds': 10, 'poison_mode': 'label_flip', 'poison_client_ids': '1,2,3', 'poison_rate_default': 0, 'poison_rate_map': '1:0.4000,2:0.6000,3:0.4000', 'poison_label_flip_offset': 1, 'poison_noise_std': 0.15}
+[2026-10-02T11:04:46.983794+05:30] [DEBUG] POST /api/start-comparison result started=True
+[2026-10-02T11:04:46.983794+05:30] [DEBUG] Loaded environment overrides from E:\FedSecureLab\.env (25 keys)
+[2026-10-02T11:04:46.983794+05:30] [DEBUG] Comparison effective config: rounds=10 poison_mode=label_flip poison_client_ids=1,2,3 poison_rate_default=0 poison_rate_map=1:0.4000,2:0.6000,3:0.4000 label_flip_offset=1 noise_std=0.15
+[2026-10-02T11:04:46.983794+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-10-02T11:04:46.985308+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:04:46.985308+05:30] [INFO] Starting clean experiment (10 rounds).
+[2026-10-02T11:04:46.986820+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20261002-110446-985308
+[2026-10-02T11:04:46.986820+05:30] [DEBUG] Prepared runtime env for clean: FLWR_HOME=E:\FedSecureLab\.flwr-runs\dashboard-clean-20261002-110446-985308 TMP=E:\FedSecureLab\.runtime-tmp SuperLink HTTP=54667 control=54668
+[2026-10-02T11:04:46.986820+05:30] [DEBUG] Launching clean command: E:\FedSecureLab\.venv\Scripts\python.exe -m flwr.cli.app run E:\FedSecureLab --stream --federation-config num-supernodes=5 client-resources-num-cpus=1 client-resources-num-gpus=0 --run-config num-server-rounds=10 local-epochs=1 batch-size=32 learning-rate=0.001 seed=42 poison-mode="none" poison-label-flip-offset=1 poison-noise-std=0.15 poison-rate-default=0 poison-rate-map=""
+[2026-10-02T11:04:50.279457+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:04:50.279973+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:04:50.282115+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:04:55.282538+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:04:55.284053+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:04:55.285566+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:00.279667+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:00.280675+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:00.282218+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:05.272234+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:06.270652+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:06.270652+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:11.252181+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:13.251000+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:13.251000+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:17.255276+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:19.257870+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:19.257870+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:23.253494+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:25.250456+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:25.250973+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:29.255081+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:31.256454+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:31.257964+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:35.245853+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:37.243700+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:37.245210+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:41.287275+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:43.252449+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:43.253960+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:47.278580+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:48.266370+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:48.268021+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:52.272530+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:53.275468+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:53.275468+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:05:57.272027+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:05:58.271689+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:05:58.271689+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:02.278652+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:03.280446+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:03.280446+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:07.285658+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:08.273806+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:08.273806+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:12.275506+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:13.275561+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:13.275561+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:18.270938+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:19.269443+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:19.269443+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:23.406557+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:24.267561+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:24.267561+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:29.275444+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:29.276956+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:29.278469+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:34.282707+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:34.282707+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:34.285737+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:40.568632+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:40.651902+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:40.681754+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:47.250896+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:47.251552+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:47.253582+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:53.244043+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:53.244043+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:53.245561+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:06:59.244370+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:06:59.244370+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:06:59.247403+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:05.250639+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:05.250639+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:05.252371+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:11.255489+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:11.255489+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:11.257003+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:17.242006+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:17.243517+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:17.245031+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:23.266042+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:23.266042+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:23.269073+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:29.256903+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:29.256903+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:29.259424+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:35.253778+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:35.256811+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:07:35.258327+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:41.290719+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:07:41.295604+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:07:41.298822+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:08:41.283716+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:08:41.286783+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:08:41.289812+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:09:41.271231+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:09:41.275956+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:09:41.279509+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:13.057550+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:13.057550+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:13.060097+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:21.058609+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:10:21.060627+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-10-02T11:10:21.060627+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-10-02T11:10:21.242314+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:21.243835+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:21.245348+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:27.208216+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:27.208216+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:27.210790+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:32.211053+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:32.211053+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:32.212706+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:32.832193+05:30] [DEBUG] POST /api/start-comparison payload={'num_server_rounds': 10, 'poison_mode': 'gaussian_noise', 'poison_client_ids': '1', 'poison_rate_default': 0, 'poison_rate_map': '1:1.0000', 'poison_label_flip_offset': 1, 'poison_noise_std': 0.15}
+[2026-10-02T11:10:32.832193+05:30] [DEBUG] POST /api/start-comparison result started=True
+[2026-10-02T11:10:32.832193+05:30] [DEBUG] Loaded environment overrides from E:\FedSecureLab\.env (25 keys)
+[2026-10-02T11:10:32.833810+05:30] [DEBUG] Comparison effective config: rounds=10 poison_mode=gaussian_noise poison_client_ids=1 poison_rate_default=0 poison_rate_map=1:1.0000 label_flip_offset=1 noise_std=0.15
+[2026-10-02T11:10:32.833810+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-10-02T11:10:32.834818+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:10:32.835323+05:30] [INFO] Starting clean experiment (10 rounds).
+[2026-10-02T11:10:32.836329+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20261002-111032-835323
+[2026-10-02T11:10:32.836329+05:30] [DEBUG] Prepared runtime env for clean: FLWR_HOME=E:\FedSecureLab\.flwr-runs\dashboard-clean-20261002-111032-835323 TMP=E:\FedSecureLab\.runtime-tmp SuperLink HTTP=53890 control=53891
+[2026-10-02T11:10:32.836329+05:30] [DEBUG] Launching clean command: E:\FedSecureLab\.venv\Scripts\python.exe -m flwr.cli.app run E:\FedSecureLab --stream --federation-config num-supernodes=5 client-resources-num-cpus=1 client-resources-num-gpus=0 --run-config num-server-rounds=10 local-epochs=1 batch-size=32 learning-rate=0.001 seed=42 poison-mode="none" poison-label-flip-offset=1 poison-noise-std=0.15 poison-rate-default=0 poison-rate-map=""
+[2026-10-02T11:10:37.210272+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:37.210272+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:37.211878+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:41.454979+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:10:41.454979+05:30] [INFO] Cleared transient live metrics at startup (--reset).
+[2026-10-02T11:10:41.454979+05:30] [INFO] Starting dashboard server on http://127.0.0.1:8000/federation-process.html
+[2026-10-02T11:10:42.304390+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:42.355228+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:42.440617+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:47.863298+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:47.863298+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:47.865324+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:52.857187+05:30] [DEBUG] GET /api/run-state -> running=False phase=idle clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:52.857187+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:53.252531+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:10:57.421056+05:30] [DEBUG] POST /api/start-comparison payload={'num_server_rounds': 5, 'poison_mode': 'gaussian_noise', 'poison_client_ids': '1', 'poison_rate_default': 0, 'poison_rate_map': '1:1.0000', 'poison_label_flip_offset': 1, 'poison_noise_std': 0.15}
+[2026-10-02T11:10:57.421056+05:30] [DEBUG] POST /api/start-comparison result started=True
+[2026-10-02T11:10:57.423448+05:30] [DEBUG] Loaded environment overrides from E:\FedSecureLab\.env (25 keys)
+[2026-10-02T11:10:57.423448+05:30] [DEBUG] Comparison effective config: rounds=5 poison_mode=gaussian_noise poison_client_ids=1 poison_rate_default=0 poison_rate_map=1:1.0000 label_flip_offset=1 noise_std=0.15
+[2026-10-02T11:10:57.423448+05:30] [INFO] Comparison requested. Clean data will be saved before poisoned training begins.
+[2026-10-02T11:10:57.424969+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:10:57.424969+05:30] [INFO] Starting clean experiment (5 rounds).
+[2026-10-02T11:10:57.426481+05:30] [INFO] Using isolated Flower runtime: dashboard-clean-20261002-111057-424969
+[2026-10-02T11:10:57.426481+05:30] [DEBUG] Prepared runtime env for clean: FLWR_HOME=E:\FedSecureLab\.flwr-runs\dashboard-clean-20261002-111057-424969 TMP=E:\FedSecureLab\.runtime-tmp SuperLink HTTP=59430 control=59431
+[2026-10-02T11:10:57.426481+05:30] [DEBUG] Launching clean command: E:\FedSecureLab\.venv\Scripts\python.exe -m flwr.cli.app run E:\FedSecureLab --stream --federation-config num-supernodes=5 client-resources-num-cpus=1 client-resources-num-gpus=0 --run-config num-server-rounds=5 local-epochs=1 batch-size=32 learning-rate=0.001 seed=42 poison-mode="none" poison-label-flip-offset=1 poison-noise-std=0.15 poison-rate-default=0 poison-rate-map=""
+[2026-10-02T11:10:57.857995+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:10:57.857995+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:10:58.866811+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:02.867973+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:02.869488+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:03.872480+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:08.868273+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:08.868273+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:08.870819+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:14.863465+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:14.863465+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:14.864989+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:19.865975+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:19.865975+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:19.869510+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:25.858015+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:25.859531+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:25.861043+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:30.861623+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:30.862134+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:30.863643+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:35.869436+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:35.870540+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:35.871561+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:40.866635+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:40.868146+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:40.869656+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:45.870960+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:45.870960+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:45.872472+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:50.866754+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:51.864213+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:51.864213+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:11:55.865412+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:11:56.870090+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:11:56.870600+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:01.865508+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:01.866020+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:01.868087+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:07.869360+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:07.869870+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:07.871984+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:12.866900+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:13.872622+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:13.872622+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:17.874077+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:18.870597+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:18.872313+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:23.867865+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:23.869418+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:23.870423+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:28.864307+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:29.864886+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:29.864886+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:34.863450+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:35.866835+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:35.866835+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:39.860521+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:40.870445+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:40.870913+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:44.860725+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:46.870578+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:46.870578+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:49.865983+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:52.867687+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:52.867687+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:54.868224+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:12:58.868424+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:12:58.868424+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:12:59.873384+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:03.865610+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:03.865610+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:05.861447+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:09.867739+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:09.867739+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:10.873381+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:15.868751+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:15.868751+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:15.870776+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:20.864949+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:20.865455+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:20.866459+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:25.869214+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:25.869725+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:25.871616+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:30.865328+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:30.865328+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:30.866842+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:35.900638+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:35.902155+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:35.903665+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:41.299232+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:41.307837+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:41.317511+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:46.866149+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:46.866149+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:46.867662+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:51.893499+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:51.910632+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:13:51.913920+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:57.857227+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:13:57.858800+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:13:57.860353+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:02.862333+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:02.863846+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:02.865360+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:07.862609+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:07.864125+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:07.865641+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:12.860519+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:12.861162+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:13.864248+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:17.865579+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:17.867093+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:18.872041+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:23.864924+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:23.864924+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:23.866436+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:28.865547+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:29.860826+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:29.860826+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:33.874999+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:34.869407+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:34.870573+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:38.874486+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:39.866048+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:39.867560+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:44.865051+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:45.856764+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:45.858276+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:50.858013+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:50.859524+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:50.861613+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:14:55.860675+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:14:55.861190+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:14:55.862699+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:00.859526+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:00.860530+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:00.862556+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:05.862134+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:05.862134+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:05.863648+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:10.866731+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:10.868243+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:10.870269+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:16.862397+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:16.864337+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:16.865848+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:21.862247+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:22.863610+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:22.865124+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:26.872012+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:27.860580+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:28.872518+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:31.870779+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:32.861395+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:34.865414+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:36.864942+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:37.857979+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:39.867528+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:42.860864+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:42.860864+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:44.869362+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:47.869641+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:47.870646+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:49.873582+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:52.864780+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:53.863554+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:54.868007+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:15:58.860318+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:15:58.860318+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:15:59.869654+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:03.872520+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:03.874030+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:05.869870+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:09.865391+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:09.866904+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:11.860958+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:14.872071+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:14.873590+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:16.868600+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:20.863870+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:20.864893+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:22.870495+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:25.863958+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:26.865287+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:27.865247+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:30.866407+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:31.875055+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:32.868230+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:35.872046+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:36.871364+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:38.874864+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:41.265803+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:41.873678+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:44.859915+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:46.858633+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:46.938969+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:49.860467+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:51.863640+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:52.872194+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:54.862087+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:16:56.867212+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:16:57.867234+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:16:59.862100+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:01.871632+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:02.873695+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:04.869005+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:07.870943+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:07.872007+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:10.863506+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:13.859708+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:13.860212+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:15.862285+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:18.870418+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:18.870931+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:20.863917+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:24.857173+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:24.857173+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:25.865039+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:29.855914+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:29.857431+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:30.865065+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:34.866632+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:34.866632+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:36.865924+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:39.865829+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:40.872461+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:41.867185+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:45.243415+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:46.245632+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:47.257376+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:50.246592+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:51.252779+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:52.257199+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:17:55.247885+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:17:56.252145+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:17:58.320873+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:00.251939+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=broadcast
+[2026-10-02T11:18:01.256395+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:04.253529+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:05.860614+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=broadcast
+[2026-10-02T11:18:06.866876+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:09.861839+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:10.867154+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=evaluate
+[2026-10-02T11:18:11.871094+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:14.867315+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:15.865788+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:16.869663+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:19.866866+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:21.868192+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:21.868192+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:24.877433+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:26.865234+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:26.866750+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:29.880300+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:32.860872+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:32.863411+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:35.863004+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:37.866353+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:37.867985+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:40.861199+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:42.872386+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:42.892325+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:45.864842+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:48.872164+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:48.873676+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:50.874262+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:53.885053+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:18:53.886575+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:55.871823+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:18:59.863432+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:18:59.863432+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:01.862535+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:04.867973+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:04.869484+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:06.869834+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:09.865491+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:09.867033+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:11.962122+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:14.870273+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:14.874863+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:17.864793+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:19.870648+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:19.872305+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:22.872144+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:25.858686+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:25.859718+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:27.876122+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:30.869824+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:30.870849+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:32.918034+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:36.872822+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:36.873832+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:38.872420+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:41.876114+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:41.877720+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:43.882665+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:46.865169+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:46.866680+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:49.890603+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:51.866657+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:51.870693+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:19:55.863697+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:19:56.865829+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:19:56.875432+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:20:00.869696+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:01.865318+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:01.866840+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:20:05.874419+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:07.872576+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+poisoned_exit=None
+[2026-10-02T11:20:10.868243+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:13.861965+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:13.865030+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:20:15.866946+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:18.865234+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:18.866865+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:20:20.870211+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:23.875092+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:23.875092+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:20:25.888125+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:28.900107+05:30] [DEBUG] GET /api/metrics -> clients=5 global=1 statuses=5 phase=train
+[2026-10-02T11:20:29.873968+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:31.876558+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:34.873876+05:30] [DEBUG] GET /api/metrics -> clients=5 global=1 statuses=5 phase=evaluate
+[2026-10-02T11:20:35.869537+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:36.880219+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:39.874372+05:30] [DEBUG] GET /api/metrics -> clients=5 global=2 statuses=5 phase=train
+[2026-10-02T11:20:40.871647+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:41.884310+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:44.890276+05:30] [DEBUG] GET /api/metrics -> clients=5 global=2 statuses=5 phase=train
+[2026-10-02T11:20:45.882485+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:47.872121+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:50.870376+05:30] [DEBUG] GET /api/metrics -> clients=10 global=2 statuses=5 phase=aggregate
+[2026-10-02T11:20:51.861973+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:53.861147+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:20:55.875183+05:30] [DEBUG] GET /api/metrics -> clients=10 global=3 statuses=5 phase=train
+[2026-10-02T11:20:56.871562+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:20:58.870492+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:00.885782+05:30] [DEBUG] GET /api/metrics -> clients=10 global=3 statuses=5 phase=train
+[2026-10-02T11:21:01.896107+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:03.884992+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:06.936451+05:30] [DEBUG] GET /api/metrics -> clients=15 global=3 statuses=5 phase=aggregate
+[2026-10-02T11:21:07.861617+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:09.866582+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:12.860710+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:12.876586+05:30] [DEBUG] GET /api/metrics -> clients=15 global=3 statuses=5 phase=evaluate
+[2026-10-02T11:21:15.865217+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:17.860897+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:17.866478+05:30] [DEBUG] GET /api/metrics -> clients=15 global=4 statuses=5 phase=train
+[2026-10-02T11:21:20.984024+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:22.903619+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:22.908221+05:30] [DEBUG] GET /api/metrics -> clients=15 global=4 statuses=5 phase=train
+[2026-10-02T11:21:26.864332+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:28.866562+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:28.873363+05:30] [DEBUG] GET /api/metrics -> clients=20 global=4 statuses=5 phase=aggregate
+[2026-10-02T11:21:31.874517+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:33.867529+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:33.883075+05:30] [DEBUG] GET /api/metrics -> clients=20 global=5 statuses=5 phase=train
+[2026-10-02T11:21:36.873543+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:38.879565+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:38.893468+05:30] [DEBUG] GET /api/metrics -> clients=20 global=5 statuses=5 phase=train
+[2026-10-02T11:21:41.890954+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:43.915540+05:30] [DEBUG] GET /api/metrics -> clients=25 global=5 statuses=5 phase=aggregate
+[2026-10-02T11:21:44.863748+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:47.875700+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:49.860548+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:49.875367+05:30] [DEBUG] GET /api/metrics -> clients=25 global=5 statuses=5 phase=evaluate
+[2026-10-02T11:21:53.876873+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:54.858561+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:21:55.866963+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:21:58.865649+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:21:59.861356+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:00.869404+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:04.859071+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:04.862234+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:06.872784+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:09.864030+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:09.867119+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:11.871310+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:14.860558+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:15.865633+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:17.869766+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:19.871720+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:20.865651+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:22.865705+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:25.863919+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:25.866951+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:27.872476+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:30.870021+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:30.872138+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:32.867995+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:36.861790+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:36.864837+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:37.870056+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:41.869791+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:41.872318+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:43.872401+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:22:46.866955+05:30] [DEBUG] GET /api/run-state -> running=True phase=clean clean_exit=None poisoned_exit=None
+[2026-10-02T11:22:46.871038+05:30] [DEBUG] GET /api/comparison -> clean_clients=50 poisoned_clients=50
+[2026-10-02T11:22:47.978240+05:30] [DEBUG] Clean command exited rc=0 duration=710.6s
+[2026-10-02T11:22:48.055304+05:30] [DEBUG] Snapshot clean: copied metrics files to E:\FedSecureLab\results\comparison\clean and 25 client fragments.
+[2026-10-02T11:22:48.055304+05:30] [INFO] Saved clean snapshot with completed metrics; it will remain available during the next run.
+[2026-10-02T11:22:48.055304+05:30] [INFO] Clean experiment completed successfully.
+[2026-10-02T11:22:48.055304+05:30] [INFO] Clean snapshot is preserved. Switching to poisoned experiment.
+[2026-10-02T11:22:48.060988+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:22:48.062624+05:30] [INFO] Starting poisoned experiment (5 rounds).
+[2026-10-02T11:22:48.062624+05:30] [INFO] Using isolated Flower runtime: dashboard-poisoned-20261002-112248-062624
+[2026-10-02T11:22:48.064150+05:30] [DEBUG] Prepared runtime env for poisoned: FLWR_HOME=E:\FedSecureLab\.flwr-runs\dashboard-poisoned-20261002-112248-062624 TMP=E:\FedSecureLab\.runtime-tmp SuperLink HTTP=59870 control=59871
+[2026-10-02T11:22:48.064150+05:30] [DEBUG] Launching poisoned command: E:\FedSecureLab\.venv\Scripts\python.exe -m flwr.cli.app run E:\FedSecureLab --stream --federation-config num-supernodes=5 client-resources-num-cpus=1 client-resources-num-gpus=0 --run-config num-server-rounds=5 local-epochs=1 batch-size=32 learning-rate=0.001 seed=42 poison-mode="gaussian_noise" poison-label-flip-offset=1 poison-noise-std=0.15 poison-rate-default=0 poison-rate-map="1:1.0000" poison-client-ids="1"
+[2026-10-02T11:22:49.864369+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:22:51.870664+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:22:51.872402+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:22:54.865436+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:22:57.938372+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:22:57.940921+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:00.203352+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:03.857916+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:03.860438+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:05.861240+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:08.863795+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:08.866827+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:10.859799+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:13.860497+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:14.867672+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:15.856417+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:18.866367+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:19.872497+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:20.865452+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:23.865613+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:24.871931+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:26.860639+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:29.864265+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:29.867286+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:31.863819+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:34.863943+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:34.865454+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:36.871847+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:39.863828+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:39.866860+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:42.865487+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:44.860950+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:45.865607+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:48.864635+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:49.857406+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:50.872204+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:54.857974+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:54.857974+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:23:55.869335+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:23:59.872220+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:23:59.872220+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:00.867154+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:04.867927+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:04.867927+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:06.865167+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:09.867719+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:09.869233+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:11.865764+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:15.858121+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:15.859634+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:16.864797+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:20.867327+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:20.868837+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:22.865628+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:25.870023+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:25.870535+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:27.865684+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:31.864878+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:31.864878+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:32.868074+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:36.866894+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:36.868591+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:37.874196+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:41.871174+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:41.871174+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:42.865992+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:46.865490+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:46.867006+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:47.870573+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:51.872394+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:51.872394+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:52.864982+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:24:57.242152+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:24:57.242152+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:24:58.249819+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:02.246165+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:02.247199+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:03.252815+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:07.247351+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:07.247351+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:08.252317+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:12.867212+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:12.867212+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:13.871839+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:17.870466+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:17.870466+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:18.873293+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:22.872426+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:22.872426+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:23.873547+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:27.866827+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:27.868337+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:29.860306+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:33.863342+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:33.863342+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:34.868565+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:38.856766+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:38.858277+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:39.868379+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:43.871948+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:43.871948+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:45.860434+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:48.872504+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:48.872504+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:50.872540+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:54.863505+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:25:54.864510+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:55.865668+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:25:59.865104+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:25:59.865104+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:00.870324+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:04.867306+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:04.868819+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:05.872260+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:10.858270+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:10.859784+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:11.868712+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:15.864999+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:15.864999+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:16.868634+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:20.872404+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:20.873915+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:22.872725+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:26.872247+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:26.872247+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:28.866814+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:32.866445+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:32.867960+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:34.867119+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:38.863907+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:38.863907+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:39.867525+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:43.862725+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:43.862725+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:44.868698+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:48.870488+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:48.870891+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:50.863986+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:53.866992+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:53.866992+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:26:55.864111+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:26:58.867415+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:26:58.867415+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:00.862566+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:04.866679+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:04.867183+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:05.870290+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:10.963821+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:10.963821+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:10.965334+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:16.858249+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:16.858249+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:16.860276+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:21.860979+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:21.862494+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:21.864004+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:26.865692+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:26.865692+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:26.867205+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:32.868387+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:32.870008+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:32.871044+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:38.245466+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:38.245466+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:38.248486+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:43.858202+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:43.858202+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:43.860749+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:48.865020+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:48.865020+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:48.868047+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:53.865142+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:27:54.865721+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:27:54.866227+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:27:58.868810+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:00.857354+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:00.858866+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:03.870582+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:05.862363+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:05.862363+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:09.862564+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:10.863483+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:10.863483+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:14.870636+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:15.867373+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:15.867373+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:19.866520+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:20.868155+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:20.869671+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:25.870489+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:25.870489+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:25.873586+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:30.867159+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:30.868673+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:30.869680+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:35.864951+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:35.864951+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:35.866465+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:40.871399+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:40.871912+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:40.873426+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:46.865035+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:46.866549+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:46.868060+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:51.866583+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:51.866583+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:51.868104+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:28:56.865532+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:28:56.867054+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:28:56.868565+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:01.865402+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:01.866919+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:01.868434+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:06.871744+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:06.873260+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:06.874772+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:11.869632+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:11.870643+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:11.872340+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:16.867171+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:16.868683+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:16.870705+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:21.865037+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:21.866555+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:21.868066+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:27.863953+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:27.863953+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:27.865475+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:32.869799+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:32.870303+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:32.871817+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:38.862021+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:38.863850+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:38.865361+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:43.859440+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:43.859440+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:44.859408+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:48.858457+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:48.858457+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:49.872265+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:53.872504+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:53.872504+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:29:55.869699+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:29:59.864212+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:29:59.864212+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:01.871952+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:04.890627+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:04.894986+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:06.870904+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:10.871171+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:10.877246+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:12.867769+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:15.873726+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:15.875256+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:17.866646+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:21.863953+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:21.865465+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:22.865430+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:26.860594+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:27.858360+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:28.865509+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:32.248118+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:33.253701+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:34.260530+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:37.242620+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:38.870128+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:39.873744+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:42.856954+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:44.865219+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:44.867254+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:47.865227+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:49.870248+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:49.871773+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:53.861563+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:54.865466+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:54.867652+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:30:58.865511+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:30:59.866463+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:30:59.869487+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:04.866991+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:31:04.866991+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:04.870779+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:09.864845+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:10.866981+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:10.866981+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=broadcast
+[2026-10-02T11:31:14.869639+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:16.865013+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:16.866530+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:19.870590+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:21.865465+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:22.868293+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:24.867914+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:27.865452+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:28.884769+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:29.866761+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:33.868260+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:33.880591+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:35.862465+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:38.866361+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:39.880241+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:40.875758+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:43.878132+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:45.862669+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:45.865711+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:48.870983+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:50.868037+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:50.871069+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:53.869075+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:31:55.866807+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:31:56.880528+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:31:58.871950+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:00.873163+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:02.874917+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:03.873478+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:05.865702+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:08.860320+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:09.863819+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:11.057446+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:13.872419+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:14.870647+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:16.861934+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:19.860923+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:20.860893+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:21.880270+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:24.862576+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:25.870323+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:27.864242+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:29.867302+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:30.870642+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:32.866590+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:35.856793+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:36.876684+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:37.877167+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:40.865149+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:42.865137+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=0 phase=evaluate
+[2026-10-02T11:32:42.866659+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:46.860335+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:48.879874+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:32:48.880927+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:51.858024+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:53.875324+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:32:54.864361+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:32:56.870773+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:32:58.871333+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:32:59.868531+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:01.962742+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:03.873588+05:30] [DEBUG] GET /api/metrics -> clients=0 global=1 statuses=5 phase=train
+[2026-10-02T11:33:04.874924+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:07.866674+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:08.868662+05:30] [DEBUG] GET /api/metrics -> clients=5 global=1 statuses=5 phase=aggregate
+[2026-10-02T11:33:09.878116+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:12.868142+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:13.887155+05:30] [DEBUG] GET /api/metrics -> clients=5 global=2 statuses=5 phase=train
+[2026-10-02T11:33:14.869466+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:17.873748+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:18.885197+05:30] [DEBUG] GET /api/metrics -> clients=5 global=2 statuses=5 phase=train
+[2026-10-02T11:33:19.889678+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:22.870182+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:23.949476+05:30] [DEBUG] GET /api/metrics -> clients=9 global=2 statuses=5 phase=train
+[2026-10-02T11:33:25.866425+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:27.871215+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:29.875351+05:30] [DEBUG] GET /api/metrics -> clients=10 global=2 statuses=5 phase=aggregate
+[2026-10-02T11:33:30.873816+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:33.864901+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:34.876977+05:30] [DEBUG] GET /api/metrics -> clients=10 global=3 statuses=5 phase=train
+[2026-10-02T11:33:35.872338+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:38.869662+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:39.879903+05:30] [DEBUG] GET /api/metrics -> clients=10 global=3 statuses=5 phase=train
+[2026-10-02T11:33:40.894553+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:43.866871+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:44.884953+05:30] [DEBUG] GET /api/metrics -> clients=15 global=3 statuses=5 phase=train
+[2026-10-02T11:33:46.872930+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:48.873784+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:50.884800+05:30] [DEBUG] GET /api/metrics -> clients=15 global=3 statuses=5 phase=aggregate
+[2026-10-02T11:33:51.866575+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:53.873506+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:33:56.867314+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:33:56.870366+05:30] [DEBUG] GET /api/metrics -> clients=15 global=4 statuses=5 phase=train
+[2026-10-02T11:33:58.868202+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:01.878574+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:01.892391+05:30] [DEBUG] GET /api/metrics -> clients=15 global=4 statuses=5 phase=train
+[2026-10-02T11:34:03.865213+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:06.874876+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:07.876646+05:30] [DEBUG] GET /api/metrics -> clients=20 global=4 statuses=5 phase=aggregate
+[2026-10-02T11:34:08.868317+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:11.873596+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:12.881140+05:30] [DEBUG] GET /api/metrics -> clients=20 global=5 statuses=5 phase=evaluate
+[2026-10-02T11:34:13.871952+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:16.870400+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:18.878020+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:18.890340+05:30] [DEBUG] GET /api/metrics -> clients=20 global=5 statuses=5 phase=train
+[2026-10-02T11:34:21.871118+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:23.868077+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:23.993709+05:30] [DEBUG] GET /api/metrics -> clients=24 global=5 statuses=5 phase=train
+[2026-10-02T11:34:26.865296+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:29.860830+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:29.870975+05:30] [DEBUG] GET /api/metrics -> clients=25 global=5 statuses=5 phase=aggregate
+[2026-10-02T11:34:31.865667+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:34.870836+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:34.877936+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:34:36.866119+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:39.865517+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:39.872482+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:34:41.877334+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:44.865356+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:44.871902+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:34:46.873146+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:49.871879+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:49.877946+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:34:52.866509+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:54.868761+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:34:55.861867+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:34:57.865447+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:34:59.865141+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:35:00.862061+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:35:02.870417+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:35:05.859669+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:35:05.865365+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:35:08.863969+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:35:10.862327+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:35:10.868379+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:35:13.862344+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:35:15.870372+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:35:15.875423+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:35:18.874207+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=50
+[2026-10-02T11:35:20.865242+05:30] [DEBUG] GET /api/run-state -> running=True phase=poisoned clean_exit=0 poisoned_exit=None
+[2026-10-02T11:35:20.871933+05:30] [DEBUG] GET /api/metrics -> clients=25 global=6 statuses=5 phase=evaluate
+[2026-10-02T11:35:24.410681+05:30] [DEBUG] Poisoned command exited rc=0 duration=756.3s
+[2026-10-02T11:35:24.467065+05:30] [DEBUG] Snapshot poisoned: copied metrics files to E:\FedSecureLab\results\comparison\poisoned and 25 client fragments.
+[2026-10-02T11:35:24.467065+05:30] [INFO] Saved poisoned snapshot with completed metrics; it will remain available during the next run.
+[2026-10-02T11:35:24.467065+05:30] [INFO] Poisoned experiment completed successfully.
+[2026-10-02T11:35:24.468582+05:30] [INFO] Comparison finished. Both clean and poisoned rows are available below.
+[2026-10-02T11:35:24.472633+05:30] [DEBUG] Reset transient live metrics (client fragments, status files, live CSVs, phase file).
+[2026-10-02T11:35:24.472633+05:30] [INFO] Cleared transient live metrics after completion; snapshots remain available.
+[2026-10-02T11:35:24.868296+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:25.868766+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:25.869772+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:29.870513+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:31.869682+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:31.870983+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:35.870436+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:37.862487+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:37.863999+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:40.871735+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:42.862377+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:42.863892+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:45.865983+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:47.870678+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:47.870678+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:50.866898+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:53.865406+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:53.866930+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:35:56.869609+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:35:58.864854+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:35:58.864854+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:02.861533+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:03.868889+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:03.869399+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:07.864830+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:09.865930+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:09.867442+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:13.857680+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:14.865594+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:14.867107+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:18.859828+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:19.867107+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:19.867107+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:23.871211+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:25.863814+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:25.865328+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:28.868801+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:30.861833+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:31.864905+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:33.872485+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:35.861934+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:37.860985+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:38.866801+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:40.856969+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:42.870430+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:44.857834+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:45.864924+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:47.871259+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:49.861865+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:51.862432+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:53.870196+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:54.859948+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:36:56.865491+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:36:59.872067+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:36:59.873581+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:02.867307+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:04.865411+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:05.866922+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:08.870144+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:09.872707+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:11.864145+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:14.865591+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:14.868616+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:16.870368+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:20.859817+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:20.861855+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:22.860019+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:25.860209+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:25.861723+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:27.862550+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:30.858091+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:30.861117+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:32.868545+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:35.860457+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:35.862530+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:37.869434+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:40.856460+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:40.859484+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:42.865479+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:45.866384+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:45.867983+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:48.860844+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:51.865714+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:51.867238+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:53.866248+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:37:56.865179+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:37:56.866691+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:37:59.858649+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:38:01.867220+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:38:01.870244+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:38:04.856578+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
+[2026-10-02T11:38:08.241805+05:30] [DEBUG] GET /api/run-state -> running=False phase=done clean_exit=0 poisoned_exit=0
+[2026-10-02T11:38:08.243389+05:30] [DEBUG] GET /api/comparison -> clean_clients=25 poisoned_clients=25
+[2026-10-02T11:38:10.246875+05:30] [DEBUG] GET /api/metrics -> clients=0 global=0 statuses=0 phase=n/a
